@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Floor
+  - Hidden_Passage_Blocker
+  - Enemy
+  - Item_Health
+  - Item_Life
+  - Item_Money
+  - Item_Scroll
+  - Item_Shots
+  - FxTemporaire
+  - Enemy_Sleeper
+  - Item_Box
+  - Player_Camouflaged
+  - Ally
+  - Item_Clock
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 136929259
+    locked: 0
+  - name: BackTerrain
+    uniqueID: 3746922705
+    locked: 0
+  - name: Terrain
+    uniqueID: 2053103567
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: SemiForeground
+    uniqueID: 4084256595
+    locked: 0
+  - name: Foreground
+    uniqueID: 1890913073
+    locked: 0

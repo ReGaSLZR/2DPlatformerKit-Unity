@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1847165184862918}
+  m_IsPrefabParent: 1
+--- !u!1 &1847165184862918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4147442326369096}
+  - component: {fileID: 61177834533251570}
+  - component: {fileID: 114269873421275278}
+  - component: {fileID: 114410008293381134}
+  - component: {fileID: 320866547454774192}
+  m_Layer: 0
+  m_Name: Dialogue-Stephen-INTRO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4147442326369096
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847165184862918}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7698717, y: -3.5252547, z: 0}
+  m_LocalScale: {x: 2.0071464, y: 2.002992, z: 1.9713556}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61177834533251570
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847165184862918}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.5175557}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.244613}
+  m_EdgeRadius: 0
+--- !u!114 &114269873421275278
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847165184862918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c007fe3bd0e4ed8a3b82c6e76b25ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusedObject: {fileID: 0}
+  afterEvent: {fileID: 114410008293381134}
+  isOneTime: 0
+  toDisablePlayerMovement: 1
+  toHalveBGMVolume: 1
+  toFinishOnTriggerExit: 0
+  textButtonNext: '>>'
+  textButtonFinish: Bye, Stephen
+  lines:
+  - line: Oh <i>salve</i> (greetings), Stephen! Selling stuff as usual, ei?
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 8300000, guid: ba7266e8b29eb4ae4b4b07c7fedc325d, type: 3}
+  - line: <i>Geia sou</i> (Hi there), Psyche. Ah.. me? Selling?
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "I haven\u2019t sold a single thing. It\u2019s been like this for the past
+      week. *sigh* I\u2019m starting to think that being a merchant isn\u2019t for
+      me."
+    speakerAvatar: {fileID: 2800000, guid: b75ef4016a3324984995b9b01be52ab0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Oh, noooo! Don\u2019t give up on your dreams, my friend. Perfect timing,
+      I need some things for my journey. What do you got in there?"
+    speakerAvatar: {fileID: 2800000, guid: c1cec163c5d644c1f9b44bc30d1d136f, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Some mineral ore. Yet people say they\u2019re not actually ore. They say
+      these are normal pebbles."
+    speakerAvatar: {fileID: 2800000, guid: b75ef4016a3324984995b9b01be52ab0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "I think my supplier tricked me. With this, I won\u2019t even be able to
+      gain any profit. Such misfortune\u2026"
+    speakerAvatar: {fileID: 2800000, guid: acf1d609af6ec4004b09169cbe717489, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Now, now. I\u2019ll help you out. Ore or not ore, I need your goods."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: Really? For what?
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+  - line: Oh, I get it. Geokinesis stuff.
+    speakerAvatar: {fileID: 2800000, guid: eb5b145ae1f8a4e10b3088f7bc170a2a, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Uwaaaaaah, Psy, you\u2019re such a blessing as always! Thank you so much!!"
+    speakerAvatar: {fileID: 2800000, guid: 04f5fbaa536a648d193996d80532104f, type: 3}
+    clipLine: {fileID: 0}
+  - line: "It\u2019s nothing, Stephen. Here, you can take all of the gold I have."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[Normally, I wouldn\u2019t feel good about spending my enemies\u2019 riches
+      but since they are lackeys of the thief who took my pudding\u2026]"
+    speakerAvatar: {fileID: 2800000, guid: 34b3b5c5bffb0483c82016455ad4300a, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[\u2026and knowing that my player probably wants me to be able to shoot
+      pebble projectiles again\u2026 I won\u2019t start a debate this time.]"
+    speakerAvatar: {fileID: 2800000, guid: f9e4d82f9b529417f81caa083ff01526, type: 3}
+    clipLine: {fileID: 0}
+  - line: '[Well, I can also be rest assured that the money will be used for a noble
+      cause. Stephen here is the benefactor of many orphans in Ironwood forest.]'
+    speakerAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[I\u2019m happy we\u2019re able to help him.]"
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Thanks again~! I\u2019ll make sure that next time we meet, Psy, I will
+      have way better goods for you."
+    speakerAvatar: {fileID: 2800000, guid: 54251936dc4eb44bd951061bd59bd900, type: 3}
+    clipLine: {fileID: 0}
+  - line: "You\u2019re welcome. Safe journey to you."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: Safe journey to you too.
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+--- !u!114 &114410008293381134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847165184862918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2499f8cb221743569139c87edfcafb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoCancel: 1
+  autoCancelDelay: 0
+  cancelOnStart: 0
+  destroyOnEnd: 1
+  _playableDirector: {fileID: 320866547454774192}
+--- !u!320 &320866547454774192
+PlayableDirector:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1847165184862918}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 1847165184862918}
+  - key: {fileID: 114799113521749882, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114063163065325926, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 0}
+  m_ExposedReferences:
+    m_References: []

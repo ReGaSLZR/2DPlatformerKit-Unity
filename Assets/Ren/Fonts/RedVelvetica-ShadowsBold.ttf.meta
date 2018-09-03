@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 41c81419c5c774a379bbf1ce42d00c14
+timeCreated: 1533095784
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Red Velvetica Shadows
+  fontNames:
+  - Red Velvetica Shadows
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

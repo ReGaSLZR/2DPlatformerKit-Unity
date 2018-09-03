@@ -1,0 +1,595 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1368087645235218}
+  m_IsPrefabParent: 1
+--- !u!1 &1056052524177452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4787581530796920}
+  - component: {fileID: 61966658800967028}
+  - component: {fileID: 114845860164269880}
+  - component: {fileID: 114820982305867396}
+  m_Layer: 0
+  m_Name: Stephen-Greeting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1368087645235218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4763164861792276}
+  - component: {fileID: 212359272269784572}
+  - component: {fileID: 70277868834708632}
+  - component: {fileID: 50485162648962168}
+  - component: {fileID: 82605373325811078}
+  - component: {fileID: 95183064436350360}
+  - component: {fileID: 114487188960496248}
+  - component: {fileID: 114099229040245086}
+  m_Layer: 0
+  m_Name: A-Stephen
+  m_TagString: Ally
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1603903389738114
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4969906979953562}
+  - component: {fileID: 114880043050780904}
+  m_Layer: 0
+  m_Name: InventoryEvent-Money
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1608609982664708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4474003957969018}
+  - component: {fileID: 320339415844279732}
+  - component: {fileID: 114904348481932394}
+  m_Layer: 0
+  m_Name: PlayableEvent-Bye
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1918932683112076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4246194917794440}
+  - component: {fileID: 114523124268252192}
+  m_Layer: 0
+  m_Name: InventoryEvent-Shots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4246194917794440
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918932683112076}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7698717, y: -3.5252547, z: 0}
+  m_LocalScale: {x: 2.0071464, y: 2.002992, z: 1.9713556}
+  m_Children: []
+  m_Father: {fileID: 4763164861792276}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4474003957969018
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608609982664708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4763164861792276}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4763164861792276
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 48.08, y: 4.25, z: 0}
+  m_LocalScale: {x: 0.4982198, y: 0.49925312, z: 0.50726515}
+  m_Children:
+  - {fileID: 4787581530796920}
+  - {fileID: 4969906979953562}
+  - {fileID: 4246194917794440}
+  - {fileID: 4474003957969018}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4787581530796920
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056052524177452}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7698717, y: -3.5252547, z: 0}
+  m_LocalScale: {x: 2.0071464, y: 2.002992, z: 1.9713556}
+  m_Children: []
+  m_Father: {fileID: 4763164861792276}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4969906979953562
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603903389738114}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.7698717, y: -3.5252547, z: 0}
+  m_LocalScale: {x: 2.0071464, y: 2.002992, z: 1.9713556}
+  m_Children: []
+  m_Father: {fileID: 4763164861792276}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50485162648962168
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &61966658800967028
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056052524177452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 2.5175557}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 8.244613}
+  m_EdgeRadius: 0
+--- !u!70 &70277868834708632
+CapsuleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.09}
+  m_Size: {x: 2.46, y: 4.83}
+  m_Direction: 0
+--- !u!82 &82605373325811078
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1.1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!95 &95183064436350360
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3aa3e18286bc24468a05fecab5309a6d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114099229040245086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f29269efc0348a1b4ffd5d65f3c8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioType: 0
+--- !u!114 &114487188960496248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5afd623532436455b8df6b08c16fcece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitCount: 1
+  animationHitTrigger: hasTriggered_Hurt
+  animationHitStopper: isHurting
+  clipsHit:
+  - {fileID: 8300000, guid: d26034d59345e418fa7980218b9725c0, type: 3}
+  delayHit: 1.4
+  animationDeath: isHurting
+  clipsDeath:
+  - {fileID: 8300000, guid: d26034d59345e418fa7980218b9725c0, type: 3}
+  delayDeath: 1.4
+  prefabDeathSubstitute: {fileID: 1050364065016910, guid: 5238ab368e61c4f7b8597151ce015b3c,
+    type: 2}
+  spawnObjects:
+  - spawnChance: 9
+    prefabSpawn: {fileID: 1583285246355984, guid: 1b4b103c1982944a087d14de6aa600eb,
+      type: 2}
+--- !u!114 &114523124268252192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1918932683112076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3f3f6aa8dcc4543ae89ab25b931260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoCancel: 0
+  autoCancelDelay: 0
+  cancelOnStart: 0
+  destroyOnEnd: 0
+  operation: 0
+  itemAffected: 12
+  inventoryValue: 300
+--- !u!114 &114820982305867396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056052524177452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13894a13301224579958f2cd25cc5c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusedObject: {fileID: 0}
+  afterEvents:
+  - {fileID: 0}
+  isOneTime: 1
+  toDisablePlayerMovement: 1
+  toHalveBGMVolume: 1
+  toFinishOnTriggerExit: 0
+  textButtonNext: Ei, Stephen
+  textButtonFinish: Lemme see!
+  narratorAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+  openingClip: {fileID: 0}
+  lines:
+  - Ei, Psyche! Glad to see you!
+  - Check out my goodies~
+--- !u!114 &114845860164269880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1056052524177452}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c007fe3bd0e4ed8a3b82c6e76b25ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusedObject: {fileID: 4763164861792276}
+  afterEvents:
+  - {fileID: 114904348481932394}
+  - {fileID: 114880043050780904}
+  - {fileID: 114523124268252192}
+  isOneTime: 0
+  toDisablePlayerMovement: 1
+  toHalveBGMVolume: 1
+  toFinishOnTriggerExit: 0
+  textButtonNext: '>>'
+  textButtonFinish: Bye, Stephen
+  lines:
+  - line: Oh <i>salve</i> (greetings), Stephen! Selling stuff as usual, ei?
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 8300000, guid: ba7266e8b29eb4ae4b4b07c7fedc325d, type: 3}
+  - line: <i>Geia sou</i> (Hi there), Psyche. Ah.. me? Selling?
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "I haven\u2019t sold a single thing ever. *sigh* I\u2019m starting to think
+      that being a merchant isn\u2019t for me."
+    speakerAvatar: {fileID: 2800000, guid: b75ef4016a3324984995b9b01be52ab0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Oh, noooo! Don\u2019t give up on your dreams, my friend. Perfect timing,
+      I need some things for my journey. What do you got in there?"
+    speakerAvatar: {fileID: 2800000, guid: c1cec163c5d644c1f9b44bc30d1d136f, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Some mineral ore. Yet people say they\u2019re not actually ore. They say
+      these are normal pebbles."
+    speakerAvatar: {fileID: 2800000, guid: b75ef4016a3324984995b9b01be52ab0, type: 3}
+    clipLine: {fileID: 0}
+  - line: "I think my supplier tricked me. With this, I won\u2019t even be able to
+      gain any profit. Such misfortune\u2026"
+    speakerAvatar: {fileID: 2800000, guid: acf1d609af6ec4004b09169cbe717489, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Now, now. I\u2019ll help you out. Ore or not ore, I need your goods."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: Really? For what?
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+  - line: Oh, I get it. Geokinesis stuff.
+    speakerAvatar: {fileID: 2800000, guid: eb5b145ae1f8a4e10b3088f7bc170a2a, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Uwaaaaaah, Psy, you\u2019re such a blessing as always! Thank you so much!!"
+    speakerAvatar: {fileID: 2800000, guid: 04f5fbaa536a648d193996d80532104f, type: 3}
+    clipLine: {fileID: 0}
+  - line: "It\u2019s nothing, Stephen. Here, you can take all of the gold I have."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[Normally, I wouldn\u2019t feel good about spending my enemies\u2019 riches
+      but since they are lackeys of the thief who took my pudding\u2026]"
+    speakerAvatar: {fileID: 2800000, guid: 34b3b5c5bffb0483c82016455ad4300a, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[\u2026and knowing that my player probably wants me to be able to shoot
+      pebble projectiles again\u2026 I won\u2019t start a debate this time.]"
+    speakerAvatar: {fileID: 2800000, guid: f9e4d82f9b529417f81caa083ff01526, type: 3}
+    clipLine: {fileID: 0}
+  - line: '[Well, I can also be rest assured that the money will be used for a noble
+      cause. Stephen here is the benefactor of many orphans in Ironwood forest.]'
+    speakerAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "[I\u2019m happy we\u2019re able to help him.]"
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: "Thanks again~! I\u2019ll make sure that next time we meet, Psy, I will
+      have way better goods for you."
+    speakerAvatar: {fileID: 2800000, guid: 54251936dc4eb44bd951061bd59bd900, type: 3}
+    clipLine: {fileID: 0}
+  - line: "You\u2019re welcome. Safe journey to you."
+    speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
+    clipLine: {fileID: 0}
+  - line: Safe journey to you too.
+    speakerAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
+    clipLine: {fileID: 0}
+--- !u!114 &114880043050780904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1603903389738114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf3f3f6aa8dcc4543ae89ab25b931260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoCancel: 0
+  autoCancelDelay: 0
+  cancelOnStart: 0
+  destroyOnEnd: 0
+  operation: 1
+  itemAffected: 10
+  inventoryValue: -1
+--- !u!114 &114904348481932394
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608609982664708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94978fed780f54ff6b999a3bcccbf552, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoCancel: 1
+  autoCancelDelay: 0
+  cancelOnStart: 0
+  destroyOnEnd: 1
+  _playableDirector: {fileID: 320339415844279732}
+--- !u!212 &212359272269784572
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1368087645235218}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -210710701
+  m_SortingLayer: 1
+  m_SortingOrder: 15
+  m_Sprite: {fileID: 21300000, guid: 80d0c20113d054322ba35e4e9cad3600, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.65, y: 5.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!320 &320339415844279732
+PlayableDirector:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608609982664708}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 0}
+    value: {fileID: 1056052524177452}
+  - key: {fileID: 114799113521749882, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 1368087645235218}
+  - key: {fileID: 114063163065325926, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 1368087645235218}
+  m_ExposedReferences:
+    m_References: []
