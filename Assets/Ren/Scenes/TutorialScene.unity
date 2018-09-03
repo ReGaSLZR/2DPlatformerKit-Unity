@@ -7901,6 +7901,16 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114401954538594510, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: defaultVolumeBGM
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114401954538594510, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: defaultVolumeSFX
+      value: 0.257
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42dc5287271a40dc830e898203a9313, type: 2}
   m_IsPrefabParent: 0
