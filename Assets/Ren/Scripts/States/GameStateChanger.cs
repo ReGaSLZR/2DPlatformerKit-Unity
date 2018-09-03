@@ -36,18 +36,12 @@ public class GameStateChanger : MonoBehaviour {
 
 		timerObserver.IsCountdownOver()
 			.Where(isOver => isOver)
-			.Subscribe(_ => {
-				gameOverText.text = gameOverSpiel_TimesUp;
-				gameOverPanel.FireEvent();
-			})
+			.Subscribe(_ => OnGameOver(gameOverSpiel_TimesUp))
 			.AddTo(this);
 
 		playerStats.IsGameOver()
 			.Where(isGameOver => isGameOver)
-			.Subscribe(_ => {
-				gameOverText.text = gameOverSpiel_Normal;
-				gameOverPanel.FireEvent();
-			})
+			.Subscribe(_ => OnGameOver(gameOverSpiel_Normal))
 			.AddTo(this);
 
 		dialogueObserver.IsDialogueDone()
@@ -63,6 +57,12 @@ public class GameStateChanger : MonoBehaviour {
 			.AddTo(this);
 
 		SetUIStartingState();
+	}
+
+	private void OnGameOver(string displayString) {
+		gameOverText.text = displayString;
+		gameOverPanel.FireEvent();
+		hudPanel.CancelNow();
 	}
 
 	private void SetUpGamePlayButtons() {
@@ -88,6 +88,8 @@ public class GameStateChanger : MonoBehaviour {
 
 	private void SetUIStartingState() {
 		gameOverPanel.CancelNow();
+
+		LogUtil.PrintInfo(gameObject, GetType(), "HudPanel FireEvent...");
 		hudPanel.FireEvent();
 	}
 

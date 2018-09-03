@@ -29,6 +29,10 @@ public class PanelEvent : InGameEvent {
 		}
 	}
 
+	private void OnEnable() {
+		panel.gameObject.SetActive(false);
+	}
+
 	private void Start() {
 		if(buttonTriggers != null && buttonTriggers.Length > 0) {
 			foreach(Button button in buttonTriggers) {
@@ -45,8 +49,6 @@ public class PanelEvent : InGameEvent {
 		} else {
 			LogUtil.PrintInfo(gameObject, GetType(), "There's no Button Triggers specified.");
 		}
-
-		panel.gameObject.SetActive(false);
 	}
 
 	protected override bool FireNow() {

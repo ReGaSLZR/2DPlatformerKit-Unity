@@ -5846,7 +5846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoCancel: 0
   autoCancelDelay: 0
-  cancelOnStart: 0
+  cancelOnStart: 1
   destroyOnEnd: 0
   panel: {fileID: 114179058614895266}
   buttonTriggers: []
