@@ -29,7 +29,6 @@ public class GameStateChanger : MonoBehaviour {
 	[Inject] DialogueController_Observer dialogueObserver;
 	[Inject] Timer_Setter timerSetter;
 	[Inject] Timer_Observer timerObserver;
-	[Inject] SceneIndexes sceneIndexes;
 
 	private void Start() {
 		SetUpGamePlayButtons();
@@ -69,9 +68,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsRetry) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
-					int index = SceneManager.GetActiveScene().buildIndex;
-					SceneManager.LoadScene(sceneIndexes.LOADING, LoadSceneMode.Additive);
-					SceneManager.LoadSceneAsync(index);
+					SceneIndexes.LoadScene(SceneManager.GetActiveScene().buildIndex);
 				})
 				.AddTo(this);
 		}
@@ -79,8 +76,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsQuit) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
-					SceneManager.LoadScene(sceneIndexes.LOADING, LoadSceneMode.Additive);
-					SceneManager.LoadSceneAsync(sceneIndexes.MAIN_MENU);
+					SceneIndexes.LoadMainMenu();
 				})
 				.AddTo(this);
 		}

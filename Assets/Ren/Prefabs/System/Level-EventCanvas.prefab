@@ -105,7 +105,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4581026674967188}
-  - component: {fileID: 114166014098211462}
   m_Layer: 0
   m_Name: SceneSystem
   m_TagString: Untagged
@@ -5495,20 +5494,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114166014098211462
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1043395968725732}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a826061630564408b834e8e99473247b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SPLASH: 0
-  MAIN_MENU: 1
-  LOADING: 2
 --- !u!114 &114175433865484786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7802,8 +7787,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08575299133de4bbc8f7c08e2826590d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultVolumeBGM: 0.45
-  defaultVolumeSFX: 0.52
+  defaultVolumeBGM: 0.5
+  defaultVolumeSFX: 0.7
   isMutedStart: 0
 --- !u!114 &114411420937298578
 MonoBehaviour:
@@ -12206,7 +12191,6 @@ MonoBehaviour:
   volumeController: {fileID: 114150804983026548}
   timerController: {fileID: 114378260555097154}
   checkpointController: {fileID: 114057603791664680}
-  sceneIndexes: {fileID: 114166014098211462}
   dialogueController: {fileID: 114374892605471048}
 --- !u!114 &114871872931859402
 MonoBehaviour:

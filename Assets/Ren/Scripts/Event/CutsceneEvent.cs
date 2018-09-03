@@ -1,26 +1,33 @@
 ﻿using UnityEngine;
+using UnityEngine.Video;
 using Zenject;
 
 public class CutsceneEvent : InGameEvent
 {
 
-//	[SerializeField] private mp4player?
+	[SerializeField] private VideoPlayer videoPlayer;
+	[SerializeField] private float additionalEndDelay = 2f;
 
 	[Inject] Timer_Setter timerSetter;
+	[Inject] Canvas canvas;
 
 	private void Awake() {
-//		autoCancelDelay = mp4player.duration?
+		autoCancelDelay = ((float) videoPlayer.clip.length + additionalEndDelay);
 	}
 
 	protected override bool FireNow() {
+		videoPlayer.Play();
+		canvas.gameObject.SetActive(false);
+
 		timerSetter.PauseCountdown();
-		//TODO
 
 		return true;
 	}
 
 	public override void CancelNow() {
-		//TODO
+		canvas.gameObject.SetActive(true);
+		videoPlayer.Stop();
+
 		timerSetter.StartCountdown();
 	}
 

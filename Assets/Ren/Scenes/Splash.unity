@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f29269efc0348a1b4ffd5d65f3c8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioType: 0
+  audioType: 1
 --- !u!82 &1204830295
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1339,7 +1339,6 @@ GameObject:
   - component: {fileID: 1468815956}
   - component: {fileID: 1468815961}
   - component: {fileID: 1468815959}
-  - component: {fileID: 1468815960}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1412,22 +1411,7 @@ MonoBehaviour:
   volumeController: {fileID: 1599931780}
   timerController: {fileID: 0}
   checkpointController: {fileID: 0}
-  sceneIndexes: {fileID: 1468815960}
   dialogueController: {fileID: 0}
---- !u!114 &1468815960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1468815955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a826061630564408b834e8e99473247b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SPLASH: 0
-  MAIN_MENU: 1
-  LOADING: 2
 --- !u!114 &1468815961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1658,7 +1642,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 49025ad61b9624ec1a96056d11328e12, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0

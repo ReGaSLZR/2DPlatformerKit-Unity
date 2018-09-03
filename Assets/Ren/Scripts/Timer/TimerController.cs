@@ -27,7 +27,7 @@ public class TimerController : MonoBehaviour,
 
 	private void Awake() {
 		countdown = new ReactiveProperty<int>(countdownStarting);
-		timerText.color = textColorSafe;
+		PrepareTimerText();
 
 		Observable.Interval(System.TimeSpan.FromSeconds(DEFAULT_INTERVAL_TIMER_TICK))
 			.Where(_ => (isOngoing) && (countdown.Value > 0))
@@ -53,9 +53,18 @@ public class TimerController : MonoBehaviour,
 		}
 	}
 
+	private void PrepareTimerText() {
+		if(timerText != null) {
+			timerText.color = textColorSafe;
+			timerText.text = countdownStarting.ToString();
+		}
+	}
+
 	private void UpdateTimerText() {
-		timerText.text = countdown.Value.ToString();
-		timerText.color = (countdown.Value <= dangerColorStart) ? textColorDanger : textColorSafe;
+		if(timerText != null) {
+			timerText.text = countdown.Value.ToString();
+			timerText.color = (countdown.Value <= dangerColorStart) ? textColorDanger : textColorSafe;
+		}
 	}
 		
 	public ReactiveProperty<int> GetCountdown() {

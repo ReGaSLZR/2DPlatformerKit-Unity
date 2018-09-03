@@ -15,7 +15,6 @@ public class ModelsInstaller : MonoInstaller<ModelsInstaller>,
 	[SerializeField] private VolumeController volumeController;
 	[SerializeField] private TimerController timerController;
 	[SerializeField] private CheckpointController checkpointController;
-	[SerializeField] private SceneIndexes sceneIndexes;
 
 	[Space]
 	[SerializeField] private DialogueController dialogueController;
@@ -47,14 +46,7 @@ public class ModelsInstaller : MonoInstaller<ModelsInstaller>,
 		SetVolumeInjections();
 		SetTimerInjections();
 		SetCheckpointInjections();
-		SetSceneInjections();
     }
-
-	private void SetSceneInjections() {
-		if(sceneIndexes != null) {
-			Container.Bind<SceneIndexes>().FromInstance(sceneIndexes);	
-		}
-	}
 
 	private void SetCameraInjections() {
 		if(cameraShaker != null) {

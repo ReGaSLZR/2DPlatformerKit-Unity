@@ -9,6 +9,7 @@ public class ToggleButton : MonoBehaviour {
 
 	private const string GET_DEFAULT_TEXT_ON_LABEL = "DEF";
 
+	[Tooltip("Label Text is required.")]
 	[SerializeField] private TextMeshProUGUI labelText;
 	[SerializeField] private string labelOn;
 	[SerializeField] private string labelOff = GET_DEFAULT_TEXT_ON_LABEL;
@@ -25,9 +26,12 @@ public class ToggleButton : MonoBehaviour {
 	private Button button;
 
 	private void Awake() {
-		if(labelOff.Equals(GET_DEFAULT_TEXT_ON_LABEL)) {
-			labelOff = labelText.text;
+		if(labelText == null) {
+			LogUtil.PrintError(gameObject, GetType(), "No labelText defined. Destroying...");
+			Destroy(this);
 		}
+
+		CheckDefaultLabels();
 
 		isToggled = new ReactiveProperty<bool>(defaultStateOn);
 		labelText.text = (defaultStateOn) ? labelOn : labelOff;
@@ -39,6 +43,16 @@ public class ToggleButton : MonoBehaviour {
 		button.OnClickAsObservable()
 			.Subscribe(_ => Toggle(!isToggled.Value))
 			.AddTo(this);
+	}
+
+	private void CheckDefaultLabels() {
+		if(labelOff.Equals(GET_DEFAULT_TEXT_ON_LABEL)) {
+			labelOff = labelText.text;
+		}
+
+		if(!StringUtil.IsNonNullNonEmpty(labelOn)) {
+			labelOn = labelOff;
+		}
 	}
 
 	public void Toggle(bool toggled) {
@@ -65,6 +79,6 @@ public class ToggleButton : MonoBehaviour {
 			}
 		}
 	}
-	
+
 
 }

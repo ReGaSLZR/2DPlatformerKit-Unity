@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.Playables;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
@@ -11,7 +10,6 @@ public class LevelStateChanger : MonoBehaviour {
 	[SerializeField] private PlayableDirector playable;
 
 	[Inject] InputControlDisabler inputDisabler;
-	[Inject] SceneIndexes sceneIndexes;
 
 	private IEnumerator CorPlayLevelState() {
 		LogUtil.PrintInfo(gameObject, GetType(), "LEVEL STATE change!");
@@ -26,8 +24,7 @@ public class LevelStateChanger : MonoBehaviour {
 		if(LEVEL_CHANGER_TYPE.STARTER == type) {
 			inputDisabler.EnableControls();
 		} else {
-			SceneManager.LoadScene(sceneIndexes.LOADING, LoadSceneMode.Additive);
-			SceneManager.LoadSceneAsync(sceneIndexes.MAIN_MENU);
+			SceneIndexes.LoadMainMenu();
 		}
 
 		Destroy(this);
