@@ -11,7 +11,7 @@ public class ToggleButton : MonoBehaviour {
 
 	[Tooltip("Label Text is required.")]
 	[SerializeField] private TextMeshProUGUI labelText;
-	[SerializeField] private string labelOn;
+	[SerializeField] private string labelOn = GET_DEFAULT_TEXT_ON_LABEL;
 	[SerializeField] private string labelOff = GET_DEFAULT_TEXT_ON_LABEL;
 	[Space]
 	[SerializeField] private bool defaultStateOn;
@@ -46,13 +46,12 @@ public class ToggleButton : MonoBehaviour {
 	}
 
 	private void CheckDefaultLabels() {
-		if(labelOff.Equals(GET_DEFAULT_TEXT_ON_LABEL)) {
-			labelOff = labelText.text;
-		}
+		labelOff = SetDefaultLabel(labelOff);
+		labelOn = SetDefaultLabel(labelOn);
+	}
 
-		if(!StringUtil.IsNonNullNonEmpty(labelOn)) {
-			labelOn = labelOff;
-		}
+	private string SetDefaultLabel(string labelTempValue) {
+		return (labelTempValue.Equals(GET_DEFAULT_TEXT_ON_LABEL)) ? labelText.text : labelTempValue;
 	}
 
 	public void Toggle(bool toggled) {

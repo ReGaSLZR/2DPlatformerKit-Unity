@@ -43,9 +43,6 @@ public class DialogueController : MonoBehaviour,
 	private void Awake() {
 		_audioSource = GetComponent<AudioSource>();
 		isFinished = new ReactiveProperty<bool>(true);
-
-		DisableFocusCam();
-		DeactivateAllPlayables();
 	}
 
 	private void DisableFocusCam() {
@@ -62,6 +59,9 @@ public class DialogueController : MonoBehaviour,
 				.Subscribe(_ => OnFinishCurrentLine())
 				.AddTo(this);
 		}
+
+		DisableFocusCam();
+		DeactivateAllPlayables();
 	}
 
 	private void DeactivateAllPlayables() {

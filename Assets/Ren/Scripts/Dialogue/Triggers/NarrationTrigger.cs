@@ -22,6 +22,7 @@ public class NarrationTrigger : DialogueTrigger {
 	}
 
 	protected override void StartDialogue() {
+		LogUtil.PrintInfo(gameObject, GetType(), "StartDialogue()...");
 		dialogueSetter.StartNarration(narratorAvatar, lines, openingClip);
 	}
 

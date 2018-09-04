@@ -8,6 +8,8 @@ public class ConfigPrefs : MonoBehaviour {
 	public static string KEY_FLOAT_AUDIO_VOLUME_BGM = "KEY_AUDIO_VOLUME_BGM";
 	public static string KEY_FLOAT_AUDIO_VOLUME_SFX = "KEY_AUDIO_VOLUME_SFX";
 
+	public static string KEY_INT_HIGHEST_LEVEL_CLEARED = "KEY_HIGHEST_LEVEL_CLEARED";
+
 	[Range(0f, 1f)]
 	[SerializeField] private float defaultVolumeBGM = 1f;
 	[Range(0f, 1f)]
@@ -15,7 +17,7 @@ public class ConfigPrefs : MonoBehaviour {
 	[SerializeField] private bool isMutedStart = false;
 
 	private void Awake() {
-		if(PlayerPrefs.HasKey(KEY_INTBOOL_IS_FIRST_RUN)) {
+		if(!PlayerPrefs.HasKey(KEY_INTBOOL_IS_FIRST_RUN)) {
 			LogUtil.PrintWarning(gameObject, GetType(), "First time run detected. Setting config defaults.");
 			PlayerPrefs.SetInt(KEY_INTBOOL_IS_FIRST_RUN, 1);
 
@@ -23,7 +25,10 @@ public class ConfigPrefs : MonoBehaviour {
 			PlayerPrefs.SetFloat(KEY_FLOAT_AUDIO_VOLUME_BGM, defaultVolumeBGM);
 			PlayerPrefs.SetFloat(KEY_FLOAT_AUDIO_VOLUME_SFX, defaultVolumeSFX);
 
-//			PlayerPrefs.Save(); 
+			//NOTE: 2 == default highest level cleared in-game | Zero-based | refer to SceneIndexes
+			PlayerPrefs.SetInt(KEY_INT_HIGHEST_LEVEL_CLEARED, 2); 
+
+			PlayerPrefs.Save(); 
 		} else {
 			LogUtil.PrintInfo(gameObject, GetType(), "This isn't the 1st time the game is ran. Ignoring config defaults.");
 		}

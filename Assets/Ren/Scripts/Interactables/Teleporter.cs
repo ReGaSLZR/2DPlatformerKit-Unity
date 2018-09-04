@@ -34,6 +34,7 @@ public class Teleporter : MonoBehaviour
 	private void Start()
 	{
 		this.OnTriggerEnter2DAsObservable()
+			.Where(otherCollider2D => !(otherCollider2D.tag.Equals(OBJECT_TAG.Untagged.ToString())))
 			.Subscribe(otherCollider2D => {
 				StopAllCoroutines();
 				StartCoroutine(CorTeleport(otherCollider2D));

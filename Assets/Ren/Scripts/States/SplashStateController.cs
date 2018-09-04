@@ -30,6 +30,6 @@ public class SplashStateController : MonoBehaviour {
 			yield return new WaitForSeconds((float) playableOnButtonTick.duration);
 		}
 			
-		SceneIndexes.LoadMainMenu();
+		SceneUtil.LoadMainMenu();
 	}
 }

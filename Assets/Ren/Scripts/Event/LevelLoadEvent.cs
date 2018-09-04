@@ -5,16 +5,20 @@ public class LevelLoadEvent : InGameEvent {
 	[Tooltip("Refers to the index of the Scene on Build Settings.")]
 	[SerializeField] private int levelIndex;
 
-	private void Awake() {
-		if(levelIndex <= 0) {
-			LogUtil.PrintError(gameObject, GetType(), "Level Index defined is not valid. Destroying...");
+	private void OnEnable() {
+		if(levelIndex <= SceneUtil.GetLatestLevel()) {
+			LogUtil.PrintWarning(gameObject, GetType(), "Level Index defined is not valid. Destroying...");
 			Destroy(this);
 		}	
 	}
 	
 	protected override bool FireNow() {
-		SceneIndexes.LoadScene(levelIndex);
-		return true;
+		if((levelIndex - SceneUtil.GetLatestLevel()) <= 1) {
+			SceneUtil.LoadScene(levelIndex);
+			return true;
+		}
+
+		return false;
 	}
 
 	public override void CancelNow() {

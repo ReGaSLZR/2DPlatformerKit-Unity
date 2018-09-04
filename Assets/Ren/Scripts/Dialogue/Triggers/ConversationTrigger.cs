@@ -20,6 +20,7 @@ public class ConversationTrigger : DialogueTrigger {
 	}
 	
 	protected override void StartDialogue() {
+		LogUtil.PrintInfo(gameObject, GetType(), "StartDialogue()...");
 		dialogueSetter.StartConversation(textureAvatars, stringLines, clipLines);
 	}
 

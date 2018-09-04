@@ -68,7 +68,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsRetry) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
-					SceneIndexes.LoadScene(SceneManager.GetActiveScene().buildIndex);
+					SceneUtil.LoadScene(SceneManager.GetActiveScene().buildIndex);
 				})
 				.AddTo(this);
 		}
@@ -76,7 +76,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsQuit) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
-					SceneIndexes.LoadMainMenu();
+					SceneUtil.LoadMainMenu();
 				})
 				.AddTo(this);
 		}
