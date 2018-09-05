@@ -24,7 +24,6 @@ public class ConfigPrefs : MonoBehaviour {
 	[SerializeField] private bool isMutedStart = false;
 
 	[Header("Player Starting Stats config")]
-	[SerializeField]
 	[SerializeField] private int health = 3;
 	[SerializeField] private int lives = 5;
 	[SerializeField] private int shots = 5;
