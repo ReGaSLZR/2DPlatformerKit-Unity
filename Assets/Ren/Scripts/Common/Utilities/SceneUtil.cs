@@ -12,9 +12,9 @@ public class SceneUtil {
 	public static string NON_WORLD_LEVEL_SCENES = "2";
 
 	public static int GetLatestLevel() {
-		string temp = PlayerPrefs.GetString(ConfigPrefs.KEY_STRING_HIGHEST_LEVEL_CLEARED, null);
-		temp = (StringUtil.IsNonNullNonEmpty(temp)) ? StringCipher.Decrypt(temp) : NON_WORLD_LEVEL_SCENES;
-		return int.Parse(temp);
+		string latestLevel = PlayerPrefs.GetString(ConfigPrefs.KEY_STRING_HIGHEST_LEVEL_CLEARED, null);
+		latestLevel = (StringUtil.IsNonNullNonEmpty(latestLevel)) ? StringCipher.Decrypt(latestLevel) : NON_WORLD_LEVEL_SCENES;
+		return int.Parse(latestLevel);
 	}
 
 	public static void SaveCurrentSceneStats(VolumeController_Observer volumeStats, PlayerStats_Observer playerStats) {

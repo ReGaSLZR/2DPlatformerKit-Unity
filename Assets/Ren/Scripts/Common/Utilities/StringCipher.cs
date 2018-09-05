@@ -20,7 +20,7 @@ public static class StringCipher
 	private const int DerivationIterations = 1000;
 
 	private static string GetPassPhrase() {
-		return Convert.ToBase64String(Encoding.ASCII.GetBytes(SceneManager.GetSceneAt(0).name));
+		return Convert.ToBase64String(Encoding.ASCII.GetBytes(SceneUtility.GetScenePathByBuildIndex(0)));
 	}
 
 	public static string Encrypt(string plainText) {
@@ -38,16 +38,16 @@ public static class StringCipher
 
 		var keyBytes = password.GetBytes(Keysize / 8);
 		var symmetricKey = new RijndaelManaged();
-			
+
 		symmetricKey.BlockSize = 256;
 		symmetricKey.Mode = CipherMode.CBC;
 		symmetricKey.Padding = PaddingMode.PKCS7;
 		var encryptor = symmetricKey.CreateEncryptor(keyBytes, ivStringBytes);
-				
+
 		var memoryStream = new MemoryStream();
-					
+
 		var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write);
-						
+
 		cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
 		cryptoStream.FlushFinalBlock();
 		// Create the final bytes as a concatenation of the random salt bytes, the random iv bytes and the cipher bytes.
@@ -86,9 +86,9 @@ public static class StringCipher
 
 		var decryptor = symmetricKey.CreateDecryptor(keyBytes, ivStringBytes);
 		var memoryStream = new MemoryStream(cipherTextBytes);
-					
+
 		var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read);
-						
+
 		var plainTextBytes = new byte[cipherTextBytes.Length];
 		var decryptedByteCount = cryptoStream.Read(plainTextBytes, 0, plainTextBytes.Length);
 		memoryStream.Close();

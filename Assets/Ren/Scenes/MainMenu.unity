@@ -1750,7 +1750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: {fileID: 1237678932}
-  labelOn: 
+  labelOn: DEF
   labelOff: DEF
   defaultStateOn: 0
   isOneTime: 0
@@ -3946,7 +3946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: {fileID: 1483475486}
-  labelOn: 
+  labelOn: DEF
   labelOff: DEF
   defaultStateOn: 0
   isOneTime: 0
@@ -6593,7 +6593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: {fileID: 1971275223}
-  labelOn: 
+  labelOn: DEF
   labelOff: DEF
   defaultStateOn: 0
   isOneTime: 0
@@ -7399,7 +7399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760392ffb6a3c4c8c801cf935fbab926, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOneTime: 0
+  isOneTime: 1
   inGameEvents:
   - {fileID: 387492925}
 --- !u!1 &1432308581
@@ -7596,7 +7596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labelText: {fileID: 444481708}
-  labelOn: 
+  labelOn: DEF
   labelOff: DEF
   defaultStateOn: 0
   isOneTime: 0

@@ -2792,7 +2792,7 @@ GameObject:
   - component: {fileID: 114969142265049816}
   - component: {fileID: 114766381475760650}
   - component: {fileID: 114871453492189298}
-  - component: {fileID: 114401954538594510}
+  - component: {fileID: 114122847402624260}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -3341,7 +3341,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1398389582516022}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.057953, y: 1.0670929, z: -10}
+  m_LocalPosition: {x: -6.6799927, y: -0.33999634, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4119357682822290}
@@ -5944,6 +5944,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114122847402624260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894590395515268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24853dadc7ae94ded9ef31a7f27994e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasHolder: {fileID: 223543066386162516}
 --- !u!114 &114126436436987580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8943,20 +8955,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114401954538594510
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1894590395515268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08575299133de4bbc8f7c08e2826590d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVolumeBGM: 0.5
-  defaultVolumeSFX: 0.7
-  isMutedStart: 0
 --- !u!114 &114411420937298578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12415,6 +12413,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _installers:
   - {fileID: 114871453492189298}
+  - {fileID: 114122847402624260}
   _installerPrefabs: []
   _scriptableObjectInstallers: []
   _autoRun: 1
