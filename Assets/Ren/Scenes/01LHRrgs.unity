@@ -1115,7 +1115,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1204830291}
-  - component: {fileID: 1204830293}
   - component: {fileID: 1204830292}
   - component: {fileID: 1204830295}
   - component: {fileID: 1204830294}
@@ -1154,20 +1153,6 @@ MonoBehaviour:
   playButton: {fileID: 1019520258}
   playableOnButtonTick: {fileID: 192185558}
   bgmHolder: {fileID: 1599931782}
---- !u!114 &1204830293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1204830290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08575299133de4bbc8f7c08e2826590d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultVolumeBGM: 1
-  defaultVolumeSFX: 1
-  isMutedStart: 0
 --- !u!114 &1204830294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,6 +1412,11 @@ MonoBehaviour:
   defaultVolumeBGM: 0.5
   defaultVolumeSFX: 0.65
   isMutedStart: 0
+  health: 3
+  lives: 5
+  shots: 5
+  money: 0
+  scrolls: 0
 --- !u!114 &1468815961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1655,11 +1645,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49025ad61b9624ec1a96056d11328e12, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 81de856bdd0b242c8a4e7e796c506c48, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -56,7 +56,7 @@ public class ToggleButton : MonoBehaviour {
 
 	public void Toggle(bool toggled) {
 		isToggled.Value = toggled;
-		labelText.text = (isToggled.Value) ? labelOn : labelOff;
+		labelText.text = (toggled) ? labelOn : labelOff;
 		FireEvents();
 
 		if(isOneTime) {
