@@ -30,7 +30,6 @@ public interface PlayerStats_Observer {
 	ReactiveProperty<bool> IsOutOfMoney();
 
 	ReactiveProperty<int> GetScrolls();
-	ReactiveProperty<bool> HasCollectedScrolls();
 
 }
 

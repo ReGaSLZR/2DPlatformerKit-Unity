@@ -27,3 +27,7 @@ public class AudioUtil {
 	}
 
 }
+
+public enum AUDIO_TYPE {
+	SFX, BGM
+}

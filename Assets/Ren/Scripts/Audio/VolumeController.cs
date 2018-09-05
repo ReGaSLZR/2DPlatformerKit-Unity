@@ -48,11 +48,7 @@ public class VolumeController : MonoBehaviour,
 		}
 		else {
 			muteController.isToggled
-				.Subscribe(toggled => {
-					isMuted.Value = toggled;
-					PlayerPrefs.SetInt(ConfigPrefs.KEY_INTBOOL_AUDIO_ISMUTED, (toggled) ? 1 : 0);
-//					PlayerPrefs.Save(); //TODO code during checkpoints
-				})
+				.Subscribe(toggled => isMuted.Value = toggled)
 				.AddTo(this);
 		}
 
@@ -61,11 +57,7 @@ public class VolumeController : MonoBehaviour,
 		}
 		else {
 			sliderBGM.OnValueChangedAsObservable()
-				.Subscribe(value => {
-					volumeBGM.Value = value; 
-					PlayerPrefs.SetFloat(ConfigPrefs.KEY_FLOAT_AUDIO_VOLUME_BGM, value);
-//					PlayerPrefs.Save(); //TODO code during checkpoints
-				})
+				.Subscribe(value => volumeBGM.Value = value)
 				.AddTo(this);
 		}
 
@@ -74,11 +66,7 @@ public class VolumeController : MonoBehaviour,
 		}
 		else {
 			sliderSFX.OnValueChangedAsObservable()
-				.Subscribe(value => {
-					volumeSFX.Value = value; 
-					PlayerPrefs.SetFloat(ConfigPrefs.KEY_FLOAT_AUDIO_VOLUME_SFX, value);
-//					PlayerPrefs.Save(); //TODO code during checkpoints
-				})
+				.Subscribe(value => volumeSFX.Value = value)
 				.AddTo(this);
 		}
 	}

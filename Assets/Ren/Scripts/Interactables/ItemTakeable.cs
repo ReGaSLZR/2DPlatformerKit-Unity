@@ -72,8 +72,7 @@ public class ItemTakeable : MonoBehaviour
 
 	private void DestroyItem() {
 		if(prefabTakenEffect != null) {
-			GameObject takenEffect = Instantiate(prefabTakenEffect, this.gameObject.transform.position,
-				this.gameObject.transform.rotation);
+			GameObject takenEffect = Instantiate(prefabTakenEffect, this.gameObject.transform, true);
 
 			instantiator.InjectPrefab(takenEffect);
 

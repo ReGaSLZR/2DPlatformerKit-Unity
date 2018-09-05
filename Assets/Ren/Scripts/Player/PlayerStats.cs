@@ -45,38 +45,34 @@ public class PlayerStats : MonoBehaviour,
 	[SerializeField] private int scrollsMax = 3;
 	[SerializeField] private int scrollsStarting = 0;
 	private ReactiveProperty<int> scrolls;
-	private ReactiveProperty<bool> hasCollectedAllScrolls;
-
-//	[Inject] PlayerStats_Setter playerModel;
 
 	private void Awake() {
-//		playerModel.SetStats(this);
-
 		InitReactiveProperties_Basic();
 		InitReactiveProperties_Derived();
 	}
 
-	private void Start() {
-		
-	}
-
 	private void InitReactiveProperties_Basic() {
-		health = new ReactiveProperty<int>(healthStarting);
+		int temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_HEALTH, healthStarting);
+		health = new ReactiveProperty<int>((temp <= healthMax) ? temp : healthStarting);
+
 		isHit = new ReactiveProperty<bool>(false);
 		isFinalHit = new ReactiveProperty<bool>(false);
 //		isDead = new ReactiveProperty<bool>(false);
 
-		lives = new ReactiveProperty<int>(livesStarting);
+		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_LIVES, livesStarting);
+		lives = new ReactiveProperty<int>((temp <= livesMax) ? temp : livesStarting);
 //		isGameOver = new ReactiveProperty<bool>(false);
 
-		shots = new ReactiveProperty<int>(shotsStarting);
+		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SHOTS, shotsStarting);
+		shots = new ReactiveProperty<int>((temp <= shotsMax) ? temp : shotsStarting);
 //		isOutOfShots = new ReactiveProperty<bool>(false);
 
-		money = new ReactiveProperty<int>(moneyStarting);
+		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_MONEY, moneyStarting);
+		money = new ReactiveProperty<int>((temp <= moneyMax) ? temp : moneyStarting);
 //		isOutOfMoney = new ReactiveProperty<bool>(false);
 
-		scrolls = new ReactiveProperty<int>(scrollsStarting);
-//		hasCollectedAllScrolls = new ReactiveProperty<bool>(false);
+		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SCROLLS, scrollsStarting);
+		scrolls = new ReactiveProperty<int>((temp <= scrollsMax) ? temp : scrollsStarting);
 
 	}
 
@@ -104,10 +100,6 @@ public class PlayerStats : MonoBehaviour,
 
 		isOutOfMoney = money.Select(value => {
 			return (value <= 0);
-		}).ToReactiveProperty();
-
-		hasCollectedAllScrolls = scrolls.Select(value => {
-			return (value >= scrollsMax);
 		}).ToReactiveProperty();
 			
 	}
@@ -171,10 +163,6 @@ public class PlayerStats : MonoBehaviour,
 
 	public ReactiveProperty<int> GetScrolls() {
 		return scrolls;
-	}
-
-	public ReactiveProperty<bool> HasCollectedScrolls() {
-		return hasCollectedAllScrolls;
 	}
 		
 	/*********************** Health **********************/

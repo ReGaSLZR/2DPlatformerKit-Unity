@@ -10,6 +10,8 @@ public class LevelStateChanger : MonoBehaviour {
 	[SerializeField] private PlayableDirector playable;
 
 	[Inject] InputControlDisabler inputDisabler;
+	[Inject] VolumeController_Observer volumeStats;
+	[Inject] PlayerStats_Observer playerStats;
 
 	private IEnumerator CorPlayLevelState() {
 		LogUtil.PrintInfo(gameObject, GetType(), "LEVEL STATE change!");
@@ -24,7 +26,7 @@ public class LevelStateChanger : MonoBehaviour {
 		if(LEVEL_CHANGER_TYPE.STARTER == type) {
 			inputDisabler.EnableControls();
 		} else {
-			SceneUtil.SaveCurrentLevel_AsCleared();
+			SceneUtil.SaveCurrentSceneStats(volumeStats, playerStats);
 			SceneUtil.LoadMainMenu();
 		}
 
@@ -38,4 +40,8 @@ public class LevelStateChanger : MonoBehaviour {
 		}
 	}
 
+}
+
+public enum LEVEL_CHANGER_TYPE {
+	STARTER, ENDER
 }

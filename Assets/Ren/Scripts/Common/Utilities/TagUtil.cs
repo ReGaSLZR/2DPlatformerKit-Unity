@@ -1,5 +1,9 @@
 ﻿public class TagUtil {
 
+	public static bool IsUntagged(string tag) {
+		return tag.Equals(OBJECT_TAG.Untagged.ToString());
+	}
+
 	public static bool IsTagPlayer(string tag, bool allowCamouflageCheck) {
 		bool temp = tag.Equals(OBJECT_TAG.Player.ToString());
 
@@ -45,12 +49,4 @@ public enum OBJECT_TAG {
 
 	Untagged
 
-}
-
-public enum AUDIO_TYPE {
-	SFX, BGM
-}
-
-public enum LEVEL_CHANGER_TYPE {
-	STARTER, ENDER
 }
