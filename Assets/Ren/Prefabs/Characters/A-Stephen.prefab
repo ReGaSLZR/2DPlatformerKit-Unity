@@ -77,6 +77,8 @@ GameObject:
   - component: {fileID: 4474003957969018}
   - component: {fileID: 320339415844279732}
   - component: {fileID: 114904348481932394}
+  - component: {fileID: 82847093675247276}
+  - component: {fileID: 114927291605302720}
   m_Layer: 0
   m_Name: PlayableEvent-Bye
   m_TagString: Untagged
@@ -133,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1368087645235218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 48.08, y: 4.25, z: 0}
+  m_LocalPosition: {x: 51.36, y: 4.25, z: 0}
   m_LocalScale: {x: 0.4982198, y: 0.49925312, z: 0.50726515}
   m_Children:
   - {fileID: 4787581530796920}
@@ -309,6 +311,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &82847093675247276
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608609982664708}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95183064436350360
 Animator:
   serializedVersion: 3
@@ -413,7 +495,7 @@ MonoBehaviour:
   textButtonNext: Ei, Stephen
   textButtonFinish: Lemme see!
   narratorAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
-  openingClip: {fileID: 8300000, guid: 7b139aa66557b4e2e9c03f9114504d9f, type: 3}
+  openingClip: {fileID: 8300000, guid: c0d8cc9835263404381bcb9a78d6380f, type: 3}
   lines:
   - Ei, Psyche! Glad to see you!
   - Check out my goodies~
@@ -537,6 +619,18 @@ MonoBehaviour:
   cancelOnStart: 0
   destroyOnEnd: 1
   _playableDirector: {fileID: 320339415844279732}
+--- !u!114 &114927291605302720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1608609982664708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f29269efc0348a1b4ffd5d65f3c8ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioType: 0
 --- !u!212 &212359272269784572
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -601,5 +695,7 @@ PlayableDirector:
     value: {fileID: 1368087645235218}
   - key: {fileID: 114063163065325926, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
     value: {fileID: 1368087645235218}
+  - key: {fileID: 114485311613084082, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 82847093675247276}
   m_ExposedReferences:
     m_References: []

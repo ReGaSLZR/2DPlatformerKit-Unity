@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusedObject: {fileID: 0}
-  afterEvent: {fileID: 114410008293381134}
+  afterEvents: []
   isOneTime: 0
   toDisablePlayerMovement: 1
   toHalveBGMVolume: 1
@@ -186,6 +186,8 @@ PlayableDirector:
   - key: {fileID: 114799113521749882, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
     value: {fileID: 0}
   - key: {fileID: 114063163065325926, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 114485311613084082, guid: dd360ee0f127544b6935f1a2d25bdd68, type: 2}
     value: {fileID: 0}
   m_ExposedReferences:
     m_References: []

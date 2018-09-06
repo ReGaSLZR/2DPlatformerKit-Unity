@@ -112,23 +112,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1048202919779718
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4766716452330004}
-  - component: {fileID: 61646216365795650}
-  - component: {fileID: 114445337329854038}
-  m_Layer: 0
-  m_Name: Trigger-Treasures
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1054661556811576
 GameObject:
   m_ObjectHideFlags: 1
@@ -1309,23 +1292,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1402053408781774
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4645234631620136}
-  - component: {fileID: 61207299406646728}
-  - component: {fileID: 114189670285946778}
-  m_Layer: 0
-  m_Name: Trigger-Greeting
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!1 &1406112537779722
 GameObject:
   m_ObjectHideFlags: 1
@@ -2495,23 +2461,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1791468196663298
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4103326011003278}
-  - component: {fileID: 61059342946296800}
-  - component: {fileID: 114582700560020652}
-  m_Layer: 0
-  m_Name: Trigger-Hint-Hidden
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1797808506116948
 GameObject:
   m_ObjectHideFlags: 1
@@ -3154,19 +3103,6 @@ Transform:
   m_Father: {fileID: 4116645122413746}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4103326011003278
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1791468196663298}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 78.27, y: 7.75, z: 0}
-  m_LocalScale: {x: 1, y: 1.7499961, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4651119331970552}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4116645122413746
 Transform:
   m_ObjectHideFlags: 1
@@ -3654,19 +3590,6 @@ Transform:
   m_Father: {fileID: 4651119331970552}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4645234631620136
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402053408781774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4651119331970552}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4651119331970552
 Transform:
   m_ObjectHideFlags: 1
@@ -3678,9 +3601,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4628243922121306}
-  - {fileID: 4645234631620136}
-  - {fileID: 4103326011003278}
-  - {fileID: 4766716452330004}
   m_Father: {fileID: 4058752182192930}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3782,19 +3702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4656243419310160}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4766716452330004
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048202919779718}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.98, y: 2.22, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4651119331970552}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4782372306001894
 Transform:
@@ -3999,31 +3906,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
---- !u!61 &61059342946296800
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1791468196663298}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.6333771, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0608673, y: 2.0905972}
-  m_EdgeRadius: 0
 --- !u!61 &61195594815795712
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -4048,31 +3930,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 10.514127, y: 14.794302}
-  m_EdgeRadius: 0
---- !u!61 &61207299406646728
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402053408781774}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -1.5426074, y: 3.0305715}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.055404, y: 12.770356}
   m_EdgeRadius: 0
 --- !u!61 &61310778596610200
 BoxCollider2D:
@@ -4248,31 +4105,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.315207, y: 6.6307583}
-  m_EdgeRadius: 0
---- !u!61 &61646216365795650
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048202919779718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.18480682, y: 0.734334}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3775177, y: 3.5592651}
   m_EdgeRadius: 0
 --- !u!61 &61654904411177558
 BoxCollider2D:
@@ -5817,6 +5649,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 0
   itemAffected: 12
+  scrollKey: 09ud
   inventoryValue: 300
 --- !u!114 &114099924720913750
 MonoBehaviour:
@@ -5902,6 +5735,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 1
   itemAffected: 10
+  scrollKey: 09ud
   inventoryValue: 300
 --- !u!114 &114105523171428354
 MonoBehaviour:
@@ -6737,38 +6571,6 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &114189670285946778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1402053408781774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c007fe3bd0e4ed8a3b82c6e76b25ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusedObject: {fileID: 0}
-  afterEvents: []
-  isOneTime: 1
-  toDisablePlayerMovement: 0
-  toHalveBGMVolume: 1
-  toFinishOnTriggerExit: 1
-  textButtonNext: Next
-  textButtonFinish: Ok
-  lines:
-  - line: Hello there, I hope you're well. My name is Psyche... and...
-    speakerAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
-    clipLine: {fileID: 8300000, guid: ba7266e8b29eb4ae4b4b07c7fedc325d, type: 3}
-  - line: I need your help. Uguuuu..
-    speakerAvatar: {fileID: 2800000, guid: 0c9558386680e4ccd8a6279fe39dbf83, type: 3}
-    clipLine: {fileID: 0}
-  - line: It's about my Pudding-chan. Some thief stole my darling away from me!
-    speakerAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
-    clipLine: {fileID: 0}
-  - line: Please, help me get it back. I absolutely can NOT go home without Pudding-chan.
-    speakerAvatar: {fileID: 2800000, guid: 0c9558386680e4ccd8a6279fe39dbf83, type: 3}
-    clipLine: {fileID: 8300000, guid: 22176b4ee84494f74b6f67f450ff05ce, type: 3}
 --- !u!114 &114196015529543900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9445,35 +9247,6 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &114445337329854038
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1048202919779718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13894a13301224579958f2cd25cc5c96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusedObject: {fileID: 0}
-  afterEvents: []
-  isOneTime: 1
-  toDisablePlayerMovement: 1
-  toHalveBGMVolume: 1
-  toFinishOnTriggerExit: 0
-  textButtonNext: Take them
-  textButtonFinish: Noble what?
-  narratorAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
-  openingClip: {fileID: 8300000, guid: c16746ab8bc5c4a6d834606df5fe9571, type: 3}
-  lines:
-  - Uwaaaah, look what we found!
-  - What? But these belong to some other creatures.
-  - '...I don''t like the notion of stealing.'
-  - You say, they wronged me first? Well, I... I guess that's true since they took
-    away my Pudding-chan darling cutiepie.
-  - A-Alright. Let's take these treasures. Might come in handy for the journey. But
-    let's use them for noble causes only, okay?
 --- !u!114 &114450150085098862
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9833,7 +9606,8 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 1
   itemAffected: 10
-  inventoryValue: 5000
+  scrollKey: 09ud
+  inventoryValue: 1
 --- !u!114 &114542431702945870
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10311,33 +10085,8 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 0
   itemAffected: 11
+  scrollKey: 09ud
   inventoryValue: 1
---- !u!114 &114582700560020652
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1791468196663298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13894a13301224579958f2cd25cc5c96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusedObject: {fileID: 0}
-  afterEvents: []
-  isOneTime: 1
-  toDisablePlayerMovement: 1
-  toHalveBGMVolume: 1
-  toFinishOnTriggerExit: 0
-  textButtonNext: Hm..
-  textButtonFinish: Got it
-  narratorAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
-  openingClip: {fileID: 8300000, guid: 5997ae8fdcafe4a1c96a8235a9cec97e, type: 3}
-  lines:
-  - That plank of wood to the side is mighty suspicious, don't you think? Why don't
-    we try hitting it?
-  - By the way, to aim better, I can slow my fall by sliding on the wall. (Wow, I
-    didn't mean for that to rhyme.)
 --- !u!114 &114586714059121440
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10566,8 +10315,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 27
+  m_fontSizeBase: 27
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10921,6 +10670,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 0
   itemAffected: 12
+  scrollKey: 09ud
   inventoryValue: 100
 --- !u!114 &114641851312274844
 MonoBehaviour:
@@ -11528,6 +11278,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 1
   itemAffected: 10
+  scrollKey: 09ud
   inventoryValue: 0
 --- !u!114 &114710467672332450
 MonoBehaviour:
@@ -19475,8 +19226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 15}
-  m_SizeDelta: {x: 108.8, y: 46.300003}
+  m_AnchoredPosition: {x: 0, y: 8.933243}
+  m_SizeDelta: {x: 108.8, y: 58.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224426516427908702
 RectTransform:
@@ -19846,7 +19597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 4.044468}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224567125167878316

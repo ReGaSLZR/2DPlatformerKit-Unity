@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Ren/Scenes/Loading.unity
     guid: 712e35759b5094904ab41d0c7a5765fe
   - enabled: 1
-    path: Assets/Ren/Scenes/TutorialScene.unity
-    guid: 7e624f186bac941328825dae8f311244
+    path: Assets/Ren/Scenes/W1-L0-Tutorial.unity
+    guid: 2e0744318d4924783ab07b3587c4bffe
   - enabled: 1
     path: Assets/Ren/Scenes/W1-L1-test.unity
     guid: ebcf4585c5e0d4b818ee82a33a368156

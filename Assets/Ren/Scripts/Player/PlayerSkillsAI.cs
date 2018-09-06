@@ -31,7 +31,7 @@ public class PlayerSkillsAI : AIBehaviour
 	[Inject] PlayerInputControls playerInput;
 
 	private void Awake() {
-		if((skillBasicAttack == null) || (skillSpecial_1 == null) || (skillSpecial_2 == null)) {
+		if((skillBasicAttack == null)) {
 			LogUtil.PrintError(gameObject, GetType(), "Incomplete SkillBehaviour parameters supplied. Destroying...");
 			Destroy(this);
 		}
@@ -51,36 +51,40 @@ public class PlayerSkillsAI : AIBehaviour
 			})
 			.AddTo(this);
 		
-		this.FixedUpdateAsObservable()
-			.Select(_ => playerInput.hasActivated_Skill1)
-			.Where(hasPressedKey => (hasPressedKey))
-			.Timestamp()
-			.Where(x => x.Timestamp > _lastSpecial1.AddSeconds(special_1_Interval))
-			.Subscribe(x => {
-				if(playerShots.TakeShots(special_1_Cost)) {
-					_lastSpecial1 = x.Timestamp;
-					skillSpecial_1.UseSkill(false); 
-				}
-			})
-			.AddTo(this);
-	
-		this.FixedUpdateAsObservable()
-			.Select(_ => playerInput.hasActivated_Skill2)
-			.Where(hasPressedKey => (hasPressedKey))
-			.Timestamp()
-			.Where(x => x.Timestamp > _lastSpecial2.AddSeconds(special_2_Interval))
-			.Subscribe(x => {
-				if(playerShots.TakeShots(special_2_Cost)) {
-					_lastSpecial2 = x.Timestamp;
-					skillSpecial_2.UseSkill(false);
-				}
-			})
-			.AddTo(this);
-	
+		if(skillSpecial_1 != null) {
+			this.FixedUpdateAsObservable()
+				.Select(_ => playerInput.hasActivated_Skill1)
+				.Where(hasPressedKey => (hasPressedKey))
+				.Timestamp()
+				.Where(x => x.Timestamp > _lastSpecial1.AddSeconds(special_1_Interval))
+				.Subscribe(x => {
+					if(playerShots.TakeShots(special_1_Cost)) {
+						_lastSpecial1 = x.Timestamp;
+						skillSpecial_1.UseSkill(false); 
+					}
+				})
+				.AddTo(this);
+		}
+
+		if(skillSpecial_2 != null) {
+			this.FixedUpdateAsObservable()
+				.Select(_ => playerInput.hasActivated_Skill2)
+				.Where(hasPressedKey => (hasPressedKey))
+				.Timestamp()
+				.Where(x => x.Timestamp > _lastSpecial2.AddSeconds(special_2_Interval))
+				.Subscribe(x => {
+					if(playerShots.TakeShots(special_2_Cost)) {
+						_lastSpecial2 = x.Timestamp;
+						skillSpecial_2.UseSkill(false);
+					}
+				})
+				.AddTo(this);
+		}
 	}
 
 	private bool CheckNoSkillsInEffect() {
-		bool skillsInEffect = (noAttackOnSkillEffectivity && (skillSpecial_1.isInUse || skillSpecial_2.isInUse));
+		bool skillsInEffect = (noAttackOnSkillEffectivity && ((skillSpecial_1 != null) && (skillSpecial_1.isInUse)) 
+			|| ((skillSpecial_2 != null) && (skillSpecial_2.isInUse)));
 
 		if(skillsInEffect) {
 			LogUtil.PrintInfo(gameObject, GetType(), "Cannot Attack. Skill 1/2 is in use.");
