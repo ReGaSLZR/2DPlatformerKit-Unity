@@ -15,8 +15,8 @@ public class PlayerPrefsUtil {
 	public static string KEY_INT_MONEY = "KEY_MONEY";
 	public static string KEY_INT_SCROLLS = "KEY_SCROLLS";
 
+	//ENCRYPTED
 	public static string KEY_STRING_HIGHEST_LEVEL_CLEARED = "KEY_HIGHEST_LEVEL_CLEARED";
-
 
 	public static void ConfigFirstRun(
 		bool isMutedStart,
