@@ -31,8 +31,9 @@ public class ConfigPrefs : MonoBehaviour {
 	[SerializeField] private int scrolls = 0;
 
 	private void Awake() {
-		PlayerPrefs.DeleteAll();
-		PlayerPrefs.Save();
+		//NOTE: the following 2 lines are only for dev testing --Ren
+//		PlayerPrefs.DeleteAll();
+//		PlayerPrefs.Save();
 
 		if(!PlayerPrefs.HasKey(KEY_INTBOOL_IS_FIRST_RUN)) {
 
