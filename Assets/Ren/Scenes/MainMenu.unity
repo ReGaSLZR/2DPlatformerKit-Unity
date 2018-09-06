@@ -1627,7 +1627,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   requirement: 0
   scrollCount: 0
-  levelIndex: 4
+  levelIndex: 3
 --- !u!1 &147089768
 GameObject:
   m_ObjectHideFlags: 0

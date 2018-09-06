@@ -17,33 +17,40 @@ public class LevelLoadEvent : InGameEvent {
 	protected override bool FireNow() {
 		bool result = false;
 
-//		switch(requirement) {
+		switch(requirement) {
 
-//			case LOAD_REQUIREMENT.LEVEL_CLEAR : {
+			case LOAD_REQUIREMENT.LEVEL_CLEAR : {
 				if((levelIndex - SceneUtil.GetLatestLevel()) <= 1) {
 					LogUtil.PrintInfo("LevelLoadEvent: index to load is: " + levelIndex);
 					SceneUtil.LoadScene(levelIndex);
+
 					result = true;
 				}
+				else {
+					result = false;
+				}
 
-				result = false;
-//				break;
-//			}
-//
-//			case LOAD_REQUIREMENT.SCROLL_COUNT : {
-//				int scrollCount = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SCROLLS, 0);
-//				if(scrollCount >= levelIndex) {
-//					SceneUtil.LoadScene(levelIndex);
-//					result = true;
-//				}
-//
-//				result = false;
-//				break;
-//			}
-//
-//		}
+				break;
+			}
+
+			case LOAD_REQUIREMENT.SCROLL_COUNT : {
+				int scrollsEarned = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SCROLLS, 0);
+				if(scrollsEarned >= scrollCount) {
+					SceneUtil.LoadScene(levelIndex);
+
+					result = true;
+				}
+				else {
+					result = false;
+				}
+
+				break;
+			}
+
+		}
 
 		return result;
+
 	}
 
 	public override void CancelNow() {

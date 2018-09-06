@@ -24,13 +24,14 @@ public class VolumeController : MonoBehaviour,
 	private void Awake() {
 		volumeBGM = new ReactiveProperty<float>();
 		volumeSFX = new ReactiveProperty<float>();
-		isMuted = new ReactiveProperty<bool>();
+		isMuted = new ReactiveProperty<bool>(false);
+
+		SetPropertyValues();
 	}
 
-	private void Start() {
-		SetPropertyValues();
-		SetUIDefaults();
+	private void OnEnable() {
 		SetChangeListeners();
+		SetUIDefaults();
 	}
 
 	private void SetPropertyValues() {

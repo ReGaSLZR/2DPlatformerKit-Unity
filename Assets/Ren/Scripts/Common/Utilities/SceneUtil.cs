@@ -35,12 +35,12 @@ public class SceneUtil {
 
 	public static void LoadMainMenu() {
 		SceneManager.LoadSceneAsync(LOADING, LoadSceneMode.Additive);
-		SceneManager.LoadSceneAsync(MAIN_MENU, LoadSceneMode.Single);
+		SceneManager.LoadSceneAsync(MAIN_MENU);
 	}
 
 	public static void LoadScene(int index) {
 		SceneManager.LoadSceneAsync(LOADING, LoadSceneMode.Additive);
-		SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
+		SceneManager.LoadSceneAsync(index);
 	}
 
 }

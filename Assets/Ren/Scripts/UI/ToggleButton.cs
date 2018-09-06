@@ -21,7 +21,7 @@ public class ToggleButton : MonoBehaviour {
 	[SerializeField] private string onFailedEventSpiel = "???";
 	[SerializeField] private Color onFailedEventColor = Color.red;
 
-	public ReactiveProperty<bool> isToggled;
+	public ReactiveProperty<bool> isToggled = new ReactiveProperty<bool>();
 
 	private Button button;
 
@@ -33,13 +33,12 @@ public class ToggleButton : MonoBehaviour {
 
 		CheckDefaultLabels();
 
-		isToggled = new ReactiveProperty<bool>(defaultStateOn);
 		labelText.text = (defaultStateOn) ? labelOn : labelOff;
 
 		button = GetComponent<Button>();
 	}
 
-	private void Start() {
+	private void OnEnable() {
 		button.OnClickAsObservable()
 			.Subscribe(_ => Toggle(!isToggled.Value))
 			.AddTo(this);
@@ -55,12 +54,17 @@ public class ToggleButton : MonoBehaviour {
 	}
 
 	public void Toggle(bool toggled) {
-		isToggled.Value = toggled;
-		labelText.text = (toggled) ? labelOn : labelOff;
-		FireEvents();
+		if(isToggled != null) {
+			isToggled.Value = toggled;
 
-		if(isOneTime) {
-			button.interactable = false;
+			labelText.text = (toggled) ? labelOn : labelOff;
+			FireEvents();
+
+			if(isOneTime) {
+				button.interactable = false;
+			}
+		} else {
+			LogUtil.PrintWarning(gameObject, GetType(), "Reactive 'isToggled' is null.");
 		}
 	}
 
