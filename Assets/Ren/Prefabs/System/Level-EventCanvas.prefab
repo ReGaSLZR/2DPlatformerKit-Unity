@@ -3288,7 +3288,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1850463034473986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 64.9, y: 4.72, z: 0}
+  m_LocalPosition: {x: 41.31, y: 4.72, z: 0}
   m_LocalScale: {x: 0.08928532, y: 0.08542387, z: 1}
   m_Children: []
   m_Father: {fileID: 4782372306001894}
@@ -13190,7 +13190,7 @@ MonoBehaviour:
   shotsStarting: 100
   moneyMax: 9999
   moneyStarting: 0
-  scrollsMax: 3
+  scrollsMax: 99
   scrollsStarting: 0
 --- !u!114 &114854228598291332
 MonoBehaviour:

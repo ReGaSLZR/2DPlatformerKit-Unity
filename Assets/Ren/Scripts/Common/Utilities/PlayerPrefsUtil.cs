@@ -5,6 +5,8 @@ public class PlayerPrefsUtil {
 
 	private static string KEY_INTBOOL_IS_FIRST_RUN = "KEY_IS_FIRST_RUN";
 
+	private static string KEY_STRING_SCROLL_LIST = "KEY_SCROLL_LIST";
+
 	public static string KEY_INTBOOL_AUDIO_ISMUTED = "KEY_AUDIO_ISMUTED";
 	public static string KEY_FLOAT_AUDIO_VOLUME_BGM = "KEY_AUDIO_VOLUME_BGM";
 	public static string KEY_FLOAT_AUDIO_VOLUME_SFX = "KEY_AUDIO_VOLUME_SFX";
@@ -65,7 +67,7 @@ public class PlayerPrefsUtil {
 		PlayerPrefs.SetInt(KEY_INT_LIVES, playerStats.GetLives().Value);
 		PlayerPrefs.SetInt(KEY_INT_SHOTS, playerStats.GetShots().Value);
 		PlayerPrefs.SetInt(KEY_INT_MONEY, playerStats.GetShots().Value);
-		PlayerPrefs.SetInt(KEY_INT_SCROLLS, playerStats.GetScrolls().Value);
+//		PlayerPrefs.SetInt(KEY_INT_SCROLLS, playerStats.GetScrolls().Value);
 
 		PlayerPrefs.Save();
 	}
@@ -75,6 +77,27 @@ public class PlayerPrefsUtil {
 		latestLevel = (StringUtil.IsNonNullNonEmpty(latestLevel)) ? StringCipher.Decrypt(latestLevel) 
 			: SceneUtil.NON_WORLD_LEVEL_SCENES;
 		return int.Parse(latestLevel);
+	}
+
+	public static void SaveScroll(string scrollKey) {
+		if(!IsScrollKeyTaken(scrollKey)) {
+			LogUtil.PrintInfo("PlayerPrefsUtil: Saving Scroll count");
+
+			int tempScrollCount = PlayerPrefs.GetInt(KEY_INT_SCROLLS, 0);
+			tempScrollCount++;
+			PlayerPrefs.SetInt(KEY_INT_SCROLLS, tempScrollCount);
+
+			string tempScrollKeyList = PlayerPrefs.GetString(KEY_STRING_SCROLL_LIST, "");
+			tempScrollKeyList += ("-" + scrollKey + "-");
+			PlayerPrefs.SetString(KEY_STRING_SCROLL_LIST, tempScrollKeyList);
+
+			PlayerPrefs.Save();
+		}
+	}
+
+	public static bool IsScrollKeyTaken(string scrollKey) {
+		string tempScrollKeyList = PlayerPrefs.GetString(KEY_STRING_SCROLL_LIST, "");
+		return tempScrollKeyList.Contains(scrollKey);
 	}
 
 }

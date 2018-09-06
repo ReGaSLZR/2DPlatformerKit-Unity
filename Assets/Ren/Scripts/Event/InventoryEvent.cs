@@ -5,7 +5,11 @@ public class InventoryEvent : InGameEvent
 {
 
 	[SerializeField] private INVENTORY_OPERATION operation;
+	[Space]
 	[SerializeField] private OBJECT_TAG itemAffected = OBJECT_TAG.Item;
+	[Tooltip("Only for Scroll-type item tag")]
+	[SerializeField] private string scrollKey = "09ud";
+	[Space]
 	[Tooltip("A value of -1 (when paired with operation SUBTRACT) signals zeroing out.")]
 	[SerializeField] private int inventoryValue = -1; 
 
@@ -95,7 +99,7 @@ public class InventoryEvent : InGameEvent
 
 			case OBJECT_TAG.Item_Scroll : {
 				if(operation == INVENTORY_OPERATION.ADD) {
-					setterScrolls.AddScrolls(inventoryValue);
+					setterScrolls.AddScroll(scrollKey); //NOTE: For now, we force the addition of scrolls to be 1 at a time only.
 				} else {
 					LogUtil.PrintInfo(gameObject, GetType(), "There's no Subtract operation for Item_Scroll inventory.");
 				}

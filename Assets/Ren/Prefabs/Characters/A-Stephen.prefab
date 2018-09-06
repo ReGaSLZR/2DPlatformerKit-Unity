@@ -365,6 +365,12 @@ MonoBehaviour:
   - spawnChance: 9
     prefabSpawn: {fileID: 1583285246355984, guid: 1b4b103c1982944a087d14de6aa600eb,
       type: 2}
+  - spawnChance: 2
+    prefabSpawn: {fileID: 1220396089845390, guid: da885608991c6496b8371df504517fa7,
+      type: 2}
+  - spawnChance: 1
+    prefabSpawn: {fileID: 1054154005950806, guid: 4f6e3ac876eee4ba2abf1045d27854f2,
+      type: 2}
 --- !u!114 &114523124268252192
 MonoBehaviour:
   m_ObjectHideFlags: 1

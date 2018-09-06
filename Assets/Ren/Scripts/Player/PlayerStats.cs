@@ -42,7 +42,7 @@ public class PlayerStats : MonoBehaviour,
 	private ReactiveProperty<bool> isOutOfMoney;
 
 	[Header("Scrolls")]
-	[SerializeField] private int scrollsMax = 3;
+	[SerializeField] private int scrollsMax = 99;
 	[SerializeField] private int scrollsStarting = 0;
 	private ReactiveProperty<int> scrolls;
 
@@ -268,15 +268,16 @@ public class PlayerStats : MonoBehaviour,
 
 	/*********************** Scrolls **********************/
 
-	public void AddScroll() {
-		if(scrolls.Value < scrollsMax)  {
+	public void AddScroll(string scrollKey) {
+		if((scrolls.Value < scrollsMax) && (!PlayerPrefsUtil.IsScrollKeyTaken(scrollKey)))  {
 			scrolls.Value++;
+			PlayerPrefsUtil.SaveScroll(scrollKey);
 		}
 	}
 
-	public void AddScrolls(int scrollsToAdd) {
-		int tempScrolls = scrolls.Value + scrollsToAdd;
-		scrolls.Value = (tempScrolls < scrollsMax) ? tempScrolls : scrollsMax;
-	}
+//	public void AddScrolls(int scrollsToAdd) {
+//		int tempScrolls = scrolls.Value + scrollsToAdd;
+//		scrolls.Value = (tempScrolls < scrollsMax) ? tempScrolls : scrollsMax;
+//	}
 
 }

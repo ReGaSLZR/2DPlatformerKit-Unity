@@ -70,7 +70,7 @@ public interface PlayerStatSetter_Money {
 
 public interface PlayerStatSetter_Scrolls {
 
-	void AddScroll();
-	void AddScrolls(int scrollsToAdd);
+	void AddScroll(string scrollKey);
+//	void AddScrolls(int scrollsToAdd);
 
 }

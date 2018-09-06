@@ -14,6 +14,9 @@ public class ItemTakeable : MonoBehaviour
 	[SerializeField] private int itemValueMax = 500;
 	[SerializeField] private GameObject prefabTakenEffect;
 
+	[Header("Only for Scroll-type items")]
+	[SerializeField] private string scrollKey = "aBcD";
+
 	[Inject] PlayerStatSetter_Health setterHealth;
 	[Inject] PlayerStatSetter_Lives setterLives;
 	[Inject] PlayerStatSetter_Money setterMoney;
@@ -24,11 +27,8 @@ public class ItemTakeable : MonoBehaviour
 	[Inject] Instantiator instantiator;
 
 	private void Awake() {
-		if(TagUtil.IsTagItemMultiValue(this.gameObject.tag)) {
-			itemValue = Random.Range(itemValueMin, itemValueMax);
-		} else {
-			itemValue = 1;
-		}
+		InitializeItemValue();
+		InitializeItemScroll();
 	}
 
 	private void Start() {
@@ -49,6 +49,20 @@ public class ItemTakeable : MonoBehaviour
 			.AddTo(this);
 	}
 
+	private void InitializeItemScroll() {
+		if(gameObject.tag.Equals(OBJECT_TAG.Item_Scroll.ToString()) && PlayerPrefsUtil.IsScrollKeyTaken(scrollKey)) {
+			Destroy(this.gameObject);
+		}	
+	}
+
+	private void InitializeItemValue() {
+		if(TagUtil.IsTagItemMultiValue(this.gameObject.tag)) {
+			itemValue = Random.Range(itemValueMin, itemValueMax);
+		} else {
+			itemValue = 1;
+		}
+	}
+
 	private void AddItemToPlayerStats(string tag) {
 		if(tag.Equals(OBJECT_TAG.Item_Health.ToString())) {
 			setterHealth.AddHealth(itemValue);
@@ -60,7 +74,7 @@ public class ItemTakeable : MonoBehaviour
 			setterMoney.AddMoney(itemValue);
 		}
 		else if(tag.Equals(OBJECT_TAG.Item_Scroll.ToString())) {
-			setterScrolls.AddScroll();
+			setterScrolls.AddScroll(scrollKey);
 		}
 		else if(tag.Equals(OBJECT_TAG.Item_Shots.ToString())) {
 			setterShots.AddShots(itemValue);
