@@ -353,11 +353,13 @@ MonoBehaviour:
   animationHitTrigger: hasTriggered_Hurt
   animationHitStopper: isHurting
   clipsHit:
-  - {fileID: 8300000, guid: d26034d59345e418fa7980218b9725c0, type: 3}
+  - {fileID: 8300000, guid: 3094367b37fb449359a107d59253d69a, type: 3}
+  - {fileID: 8300000, guid: 7723509cb3dd843228a566332fe75639, type: 3}
   delayHit: 1.4
   animationDeath: isHurting
   clipsDeath:
-  - {fileID: 8300000, guid: d26034d59345e418fa7980218b9725c0, type: 3}
+  - {fileID: 8300000, guid: 3094367b37fb449359a107d59253d69a, type: 3}
+  - {fileID: 8300000, guid: 7723509cb3dd843228a566332fe75639, type: 3}
   delayDeath: 1.4
   prefabDeathSubstitute: {fileID: 1050364065016910, guid: 5238ab368e61c4f7b8597151ce015b3c,
     type: 2}
@@ -388,6 +390,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 0
   itemAffected: 12
+  scrollKey: 09ud
   inventoryValue: 300
 --- !u!114 &114820982305867396
 MonoBehaviour:
@@ -410,7 +413,7 @@ MonoBehaviour:
   textButtonNext: Ei, Stephen
   textButtonFinish: Lemme see!
   narratorAvatar: {fileID: 2800000, guid: d4cdf3b11cc2f457db168548b6caf1f0, type: 3}
-  openingClip: {fileID: 0}
+  openingClip: {fileID: 8300000, guid: 7b139aa66557b4e2e9c03f9114504d9f, type: 3}
   lines:
   - Ei, Psyche! Glad to see you!
   - Check out my goodies~
@@ -516,6 +519,7 @@ MonoBehaviour:
   destroyOnEnd: 0
   operation: 1
   itemAffected: 10
+  scrollKey: 09ud
   inventoryValue: -1
 --- !u!114 &114904348481932394
 MonoBehaviour:
