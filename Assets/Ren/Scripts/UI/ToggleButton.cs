@@ -34,11 +34,10 @@ public class ToggleButton : MonoBehaviour {
 		CheckDefaultLabels();
 
 		labelText.text = (defaultStateOn) ? labelOn : labelOff;
-
 		button = GetComponent<Button>();
 	}
 
-	private void OnEnable() {
+	private void Start() {
 		button.OnClickAsObservable()
 			.Subscribe(_ => Toggle(!isToggled.Value))
 			.AddTo(this);

@@ -35,11 +35,11 @@ public class VolumeController : MonoBehaviour,
 
 	private void SetPropertyValues() {
 		LogUtil.PrintInfo(gameObject, GetType(), "Init BGM value: " 
-			+ PlayerPrefs.GetFloat(ConfigPrefs.KEY_FLOAT_AUDIO_VOLUME_BGM));
-		volumeBGM.Value = (PlayerPrefs.GetFloat(ConfigPrefs.KEY_FLOAT_AUDIO_VOLUME_BGM, 0.5f));
+			+ PlayerPrefs.GetFloat(PlayerPrefsUtil.KEY_FLOAT_AUDIO_VOLUME_BGM));
+		volumeBGM.Value = (PlayerPrefs.GetFloat(PlayerPrefsUtil.KEY_FLOAT_AUDIO_VOLUME_BGM, 0.5f));
 		originalVolumeBGM = volumeBGM.Value;
-		volumeSFX.Value = (PlayerPrefs.GetFloat(ConfigPrefs.KEY_FLOAT_AUDIO_VOLUME_SFX, 0.5f));
-		isMuted.Value = (PlayerPrefs.GetInt(ConfigPrefs.KEY_INTBOOL_AUDIO_ISMUTED, 0) == 1);
+		volumeSFX.Value = (PlayerPrefs.GetFloat(PlayerPrefsUtil.KEY_FLOAT_AUDIO_VOLUME_SFX, 0.5f));
+		isMuted.Value = (PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INTBOOL_AUDIO_ISMUTED, 0) == 1);
 	}
 
 	private void SetChangeListeners() {

@@ -52,26 +52,26 @@ public class PlayerStats : MonoBehaviour,
 	}
 
 	private void InitReactiveProperties_Basic() {
-		int temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_HEALTH, healthStarting);
+		int temp = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_HEALTH, healthStarting);
 		health = new ReactiveProperty<int>((temp <= healthMax) ? temp : healthStarting);
 
 		isHit = new ReactiveProperty<bool>(false);
 		isFinalHit = new ReactiveProperty<bool>(false);
 //		isDead = new ReactiveProperty<bool>(false);
 
-		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_LIVES, livesStarting);
+		temp = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_LIVES, livesStarting);
 		lives = new ReactiveProperty<int>((temp <= livesMax) ? temp : livesStarting);
 //		isGameOver = new ReactiveProperty<bool>(false);
 
-		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SHOTS, shotsStarting);
+		temp = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_SHOTS, shotsStarting);
 		shots = new ReactiveProperty<int>((temp <= shotsMax) ? temp : shotsStarting);
 //		isOutOfShots = new ReactiveProperty<bool>(false);
 
-		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_MONEY, moneyStarting);
+		temp = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_MONEY, moneyStarting);
 		money = new ReactiveProperty<int>((temp <= moneyMax) ? temp : moneyStarting);
 //		isOutOfMoney = new ReactiveProperty<bool>(false);
 
-		temp = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SCROLLS, scrollsStarting);
+		temp = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_SCROLLS, scrollsStarting);
 		scrolls = new ReactiveProperty<int>((temp <= scrollsMax) ? temp : scrollsStarting);
 
 	}

@@ -20,7 +20,7 @@ public class LevelLoadEvent : InGameEvent {
 		switch(requirement) {
 
 			case LOAD_REQUIREMENT.LEVEL_CLEAR : {
-				if((levelIndex - SceneUtil.GetLatestLevel()) <= 1) {
+				if((levelIndex - PlayerPrefsUtil.GetLatestLevel()) <= 1) {
 					LogUtil.PrintInfo("LevelLoadEvent: index to load is: " + levelIndex);
 					SceneUtil.LoadScene(levelIndex);
 
@@ -34,7 +34,7 @@ public class LevelLoadEvent : InGameEvent {
 			}
 
 			case LOAD_REQUIREMENT.SCROLL_COUNT : {
-				int scrollsEarned = PlayerPrefs.GetInt(ConfigPrefs.KEY_INT_SCROLLS, 0);
+				int scrollsEarned = PlayerPrefs.GetInt(PlayerPrefsUtil.KEY_INT_SCROLLS, 0);
 				if(scrollsEarned >= scrollCount) {
 					SceneUtil.LoadScene(levelIndex);
 

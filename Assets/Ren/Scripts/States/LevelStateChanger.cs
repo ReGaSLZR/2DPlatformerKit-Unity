@@ -26,7 +26,7 @@ public class LevelStateChanger : MonoBehaviour {
 		if(LEVEL_CHANGER_TYPE.STARTER == type) {
 			inputDisabler.EnableControls();
 		} else {
-			SceneUtil.SaveCurrentSceneStats(volumeStats, playerStats);
+			PlayerPrefsUtil.SaveStats(volumeStats, playerStats);
 			SceneUtil.LoadMainMenu();
 		}
 
