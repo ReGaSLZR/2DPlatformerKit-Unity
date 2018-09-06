@@ -1,5 +1,4 @@
-﻿using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneUtil {
@@ -36,12 +35,12 @@ public class SceneUtil {
 
 	public static void LoadMainMenu() {
 		SceneManager.LoadSceneAsync(LOADING, LoadSceneMode.Additive);
-		SceneManager.LoadSceneAsync(MAIN_MENU);
+		SceneManager.LoadSceneAsync(MAIN_MENU, LoadSceneMode.Single);
 	}
 
 	public static void LoadScene(int index) {
 		SceneManager.LoadSceneAsync(LOADING, LoadSceneMode.Additive);
-		SceneManager.LoadSceneAsync(index);
+		SceneManager.LoadSceneAsync(index, LoadSceneMode.Single);
 	}
 
 }

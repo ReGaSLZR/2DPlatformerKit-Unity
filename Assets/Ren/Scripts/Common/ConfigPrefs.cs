@@ -31,6 +31,9 @@ public class ConfigPrefs : MonoBehaviour {
 	[SerializeField] private int scrolls = 0;
 
 	private void Awake() {
+		PlayerPrefs.DeleteAll();
+		PlayerPrefs.Save();
+
 		if(!PlayerPrefs.HasKey(KEY_INTBOOL_IS_FIRST_RUN)) {
 
 			LogUtil.PrintWarning(gameObject, GetType(), "First time run detected. Setting config defaults.");

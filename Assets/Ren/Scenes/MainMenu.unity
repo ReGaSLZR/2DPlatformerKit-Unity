@@ -1625,6 +1625,8 @@ MonoBehaviour:
   autoCancelDelay: 0
   cancelOnStart: 0
   destroyOnEnd: 0
+  requirement: 0
+  scrollCount: 0
   levelIndex: 4
 --- !u!1 &147089768
 GameObject:
@@ -2282,6 +2284,8 @@ MonoBehaviour:
   autoCancelDelay: 0
   cancelOnStart: 0
   destroyOnEnd: 0
+  requirement: 1
+  scrollCount: 9
   levelIndex: 6
 --- !u!1 &288186400
 GameObject:
@@ -2971,6 +2975,8 @@ MonoBehaviour:
   autoCancelDelay: 0
   cancelOnStart: 0
   destroyOnEnd: 0
+  requirement: 0
+  scrollCount: 0
   levelIndex: 3
 --- !u!1001 &390669008
 Prefab:
@@ -3419,6 +3425,8 @@ MonoBehaviour:
   autoCancelDelay: 0
   cancelOnStart: 0
   destroyOnEnd: 0
+  requirement: 0
+  scrollCount: 0
   levelIndex: 5
 --- !u!1 &434384784
 GameObject:
@@ -7409,11 +7417,11 @@ MonoBehaviour:
     lineCount: 15
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -9223,7 +9231,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10911,11 +10919,11 @@ MonoBehaviour:
     lineCount: 10
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -12449,7 +12457,7 @@ MonoBehaviour:
   isOneTime: 1
   inGameEvents:
   - {fileID: 275466404}
-  onFailedEventSpiel: Finish previous level first
+  onFailedEventSpiel: 9 Scrolls Required
   onFailedEventColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1996709772
 GameObject:
