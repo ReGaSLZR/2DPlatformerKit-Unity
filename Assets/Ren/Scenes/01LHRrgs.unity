@@ -953,7 +953,6 @@ GameObject:
   - component: {fileID: 1019520259}
   - component: {fileID: 1019520258}
   - component: {fileID: 1019520261}
-  - component: {fileID: 1019520262}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1071,21 +1070,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1019520262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1019520256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 760392ffb6a3c4c8c801cf935fbab926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOneTime: 1
-  inGameEvents:
-  - {fileID: 192185559}
-  - {fileID: 1844796732}
 --- !u!1 &1118739110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1130,6 +1114,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1204830291}
+  - component: {fileID: 1204830292}
   m_Layer: 0
   m_Name: SplashSystem
   m_TagString: Untagged
@@ -1152,6 +1137,20 @@ Transform:
   m_Father: {fileID: 1468815958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1204830292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204830290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b504d8ae7889a41409246881f605a593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playButton: {fileID: 1019520258}
+  playableOnButtonTick: {fileID: 192185558}
+  bgmHolder: {fileID: 1599931782}
 --- !u!1 &1288757066
 GameObject:
   m_ObjectHideFlags: 0
