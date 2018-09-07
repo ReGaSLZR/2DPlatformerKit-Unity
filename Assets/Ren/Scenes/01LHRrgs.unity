@@ -1320,7 +1320,7 @@ MonoBehaviour:
   isMutedStart: 0
   health: 3
   lives: 5
-  shots: 5
+  shots: 0
   money: 0
   scrolls: 0
 --- !u!114 &1468815961

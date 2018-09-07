@@ -60,7 +60,7 @@ public class PlayerPrefsUtil {
 
 		//PLAYER STATS
 		PlayerPrefs.SetInt(KEY_INT_HEALTH, 3);
-		PlayerPrefs.SetInt(KEY_INT_LIVES, 3);
+		PlayerPrefs.SetInt(KEY_INT_LIVES, 5);
 		PlayerPrefs.SetInt(KEY_INT_SHOTS, 300);
 
 		PlayerPrefs.Save(); 
