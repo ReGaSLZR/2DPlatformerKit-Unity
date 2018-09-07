@@ -225,7 +225,7 @@ MonoBehaviour:
   - spawnChance: 4
     prefabSpawn: {fileID: 1096378336288952, guid: c05d9a65082124161b4806912f7b5c54,
       type: 2}
-  - spawnChance: 0
+  - spawnChance: 5
     prefabSpawn: {fileID: 1767583048489390, guid: a7d48c36390ae49b199d1c085c5f0932,
       type: 2}
   - spawnChance: 4

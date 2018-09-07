@@ -68,6 +68,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsRetry) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
+					PlayerPrefsUtil.ConfigRetryStats();
 					SceneUtil.LoadScene(SceneManager.GetActiveScene().buildIndex);
 				})
 				.AddTo(this);

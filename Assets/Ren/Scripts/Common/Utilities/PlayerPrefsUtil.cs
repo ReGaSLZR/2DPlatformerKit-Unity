@@ -55,6 +55,17 @@ public class PlayerPrefsUtil {
 			}
 	}
 
+	public static void ConfigRetryStats() {
+		LogUtil.PrintWarning("PlayerPrefsUtil: ConfigRetryStats()");
+
+		//PLAYER STATS
+		PlayerPrefs.SetInt(KEY_INT_HEALTH, 3);
+		PlayerPrefs.SetInt(KEY_INT_LIVES, 3);
+		PlayerPrefs.SetInt(KEY_INT_SHOTS, 300);
+
+		PlayerPrefs.Save(); 
+	}
+
 	public static void SaveStats(VolumeController_Observer volumeStats, PlayerStats_Observer playerStats) {
 		PlayerPrefs.SetString(KEY_STRING_HIGHEST_LEVEL_CLEARED, 
 			StringCipher.Encrypt(SceneManager.GetActiveScene().buildIndex.ToString()));

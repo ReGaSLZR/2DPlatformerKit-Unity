@@ -1,37 +1,27 @@
 fileFormatVersion: 2
-guid: c30f90b9da1b34476973c33d2a3a6940
-timeCreated: 1532521950
+guid: acd36dc336d4c46f2a268aa094d97ae1
+timeCreated: 1536299744
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: hills_0
-    21300002: hills_1
-    21300004: hills_2
-    21300006: hills_3
-    21300008: hills_4
-    21300010: hills_5
-    21300012: hills_6
-    21300014: hills_7
-    21300016: hills_8
-    21300018: hills_9
-    21300020: hills_10
-    21300022: hills_11
-    21300024: hills_12
-    21300026: hills_13
-    21300028: hills_14
-    21300030: hills_15
-    21300032: hills_16
-    21300034: hills_17
-    21300036: hills_18
-    21300038: hills_19
-    21300040: hills_20
-    21300042: hills_21
-    21300044: hills_22
-    21300046: hills_23
-    21300048: hills_24
-    21300050: hills_25
-    21300052: hills_26
-    21300054: hills_27
+    21300000: tileset-ground-hard_0
+    21300002: tileset-ground-hard_1
+    21300004: tileset-ground-hard_2
+    21300006: tileset-ground-hard_3
+    21300008: tileset-ground-hard_4
+    21300010: tileset-ground-hard_5
+    21300012: tileset-ground-hard_6
+    21300014: tileset-ground-hard_7
+    21300016: tileset-ground-hard_8
+    21300018: tileset-ground-hard_9
+    21300020: tileset-ground-hard_10
+    21300022: tileset-ground-hard_11
+    21300024: tileset-ground-hard_12
+    21300026: tileset-ground-hard_13
+    21300028: tileset-ground-hard_14
+    21300030: tileset-ground-hard_15
+    21300032: tileset-ground-hard_16
+    21300034: tileset-ground-hard_17
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -128,203 +118,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hills_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1000
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_1
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 1000
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_2
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 1000
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_3
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 1000
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_4
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 1000
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 800
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_6
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 800
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_7
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 800
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_8
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 800
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_9
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 800
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_10
-      rect:
-        serializedVersion: 2
-        x: 200
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_11
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_12
-      rect:
-        serializedVersion: 2
-        x: 600
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_13
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 600
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: hills_14
+      name: tileset-ground-hard_0
       rect:
         serializedVersion: 2
         x: 0
@@ -338,7 +132,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_15
+      name: tileset-ground-hard_1
       rect:
         serializedVersion: 2
         x: 200
@@ -352,7 +146,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_16
+      name: tileset-ground-hard_2
       rect:
         serializedVersion: 2
         x: 400
@@ -366,7 +160,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_17
+      name: tileset-ground-hard_3
       rect:
         serializedVersion: 2
         x: 600
@@ -380,7 +174,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_18
+      name: tileset-ground-hard_4
       rect:
         serializedVersion: 2
         x: 800
@@ -394,7 +188,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_19
+      name: tileset-ground-hard_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 400
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset-ground-hard_6
       rect:
         serializedVersion: 2
         x: 0
@@ -408,7 +216,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_20
+      name: tileset-ground-hard_7
       rect:
         serializedVersion: 2
         x: 200
@@ -422,7 +230,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_21
+      name: tileset-ground-hard_8
       rect:
         serializedVersion: 2
         x: 400
@@ -436,7 +244,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_22
+      name: tileset-ground-hard_9
       rect:
         serializedVersion: 2
         x: 600
@@ -450,7 +258,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_23
+      name: tileset-ground-hard_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset-ground-hard_11
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 200
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset-ground-hard_12
       rect:
         serializedVersion: 2
         x: 0
@@ -464,7 +300,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_24
+      name: tileset-ground-hard_13
       rect:
         serializedVersion: 2
         x: 200
@@ -478,7 +314,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_25
+      name: tileset-ground-hard_14
       rect:
         serializedVersion: 2
         x: 400
@@ -492,7 +328,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_26
+      name: tileset-ground-hard_15
       rect:
         serializedVersion: 2
         x: 600
@@ -506,10 +342,24 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: hills_27
+      name: tileset-ground-hard_16
       rect:
         serializedVersion: 2
         x: 800
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tileset-ground-hard_17
+      rect:
+        serializedVersion: 2
+        x: 1000
         y: 0
         width: 200
         height: 200
