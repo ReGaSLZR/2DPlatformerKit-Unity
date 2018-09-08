@@ -18,8 +18,8 @@ public class PlayerInputKeyboardMouse : PlayerInputControls {
 
 	[Space]
 
-	[SerializeField] private KeyCode pauseKey = KeyCode.Escape;
-	[SerializeField] private Button[] pauseButtons; 
+//	[SerializeField] private KeyCode pauseKey = KeyCode.Escape;
+//	[SerializeField] private Button[] pauseButtons; 
 
 	private DateTimeOffset pauseTimeStamp;
 

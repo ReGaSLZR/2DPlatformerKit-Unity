@@ -12,8 +12,8 @@ public class PlayerInputScreenButtons : PlayerInputControls {
  	[SerializeField] private Button jump;
 	[SerializeField] private Button moveRight;
 	[SerializeField] private Button moveLeft;
-	[Space]
-	[SerializeField] private Button pauseGame;
+//	[Space]
+//	[SerializeField] private Button pauseGame;
 
 	private void Start() {
 		SetUpAttack();
