@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 114754571108478296}
   m_Layer: 0
   m_Name: Proj-BlackSword
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   detector: {fileID: 114715406356821088}
   instaKill: 0
   destroyOnKill: 1
+  prefabDestroySub: {fileID: 0}
   delayStart: 0
   delayEnd: 1
   clipAttack: {fileID: 8300000, guid: 49478f10843744fc5a5199247d9477a1, type: 3}

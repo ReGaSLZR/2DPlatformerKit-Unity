@@ -22,7 +22,7 @@
 
 	public static bool IsTagWalkable(string tag) {
 		return (tag.Equals(OBJECT_TAG.Floor.ToString()) || tag.Equals(OBJECT_TAG.Item_Box.ToString()) ||
-			tag.Equals(OBJECT_TAG.Enemy.ToString()));
+			tag.Equals(OBJECT_TAG.Enemy.ToString()) || tag.Equals(OBJECT_TAG.Enemy_Sleeper.ToString()));
 	}
 
 	public static bool IsTagSlideable(string tag) {

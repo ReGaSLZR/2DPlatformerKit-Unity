@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 58988637041465316}
   m_Layer: 0
   m_Name: Proj-Thorn-Saucer
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -283,6 +283,7 @@ MonoBehaviour:
   detector: {fileID: 114674221659496032}
   instaKill: 0
   destroyOnKill: 1
+  prefabDestroySub: {fileID: 0}
   delayStart: 0
   delayEnd: 0.4
   clipAttack: {fileID: 8300000, guid: 49478f10843744fc5a5199247d9477a1, type: 3}

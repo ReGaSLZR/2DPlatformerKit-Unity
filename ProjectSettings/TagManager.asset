@@ -18,6 +18,7 @@ TagManager:
   - Player_Camouflaged
   - Ally
   - Item_Clock
+  - Projectile
   layers:
   - Default
   - TransparentFX
