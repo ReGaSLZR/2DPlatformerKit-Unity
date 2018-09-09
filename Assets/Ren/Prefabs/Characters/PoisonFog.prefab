@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f38d25e64da254990be0367ac7daee82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags: 020000000300000004000000
+  targetTags: 02000000030000000400000006000000
   range: 5
   isLockedToFirstSingleTarget: 1
 --- !u!114 &114741358779447744
@@ -201,6 +201,7 @@ MonoBehaviour:
   detector: {fileID: 114493300649821070}
   instaKill: 1
   destroyOnKill: 0
+  prefabDestroySub: {fileID: 0}
   delayStart: 0.1
   delayEnd: 0.3
   clipAttack: {fileID: 8300000, guid: a0979ee7474cd46a088d9ac1c5118444, type: 3}
