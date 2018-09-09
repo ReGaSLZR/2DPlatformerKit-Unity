@@ -2,7 +2,6 @@
 using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
-using Zenject;
 
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(AudioSource))]
@@ -78,6 +77,7 @@ public class DashSkill : SkillBehaviour
 		AudioUtil.PlaySingleClip(GetType(), clipDash, _audioSource);
 
 		isAvailable = false;
+
 		_rigidBody2D.AddForce(GetDirection() * dashForce);
 		_rigidBody2D.constraints = dashFreezeConstraints;
 

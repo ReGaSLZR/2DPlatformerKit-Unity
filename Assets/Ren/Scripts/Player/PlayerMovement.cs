@@ -92,6 +92,11 @@ public class PlayerMovement : MonoBehaviour
 		groundObserver.IsWallSliding()
 			.Subscribe(isSliding => { 
 				AnimateChangeGround(paramIsWallSliding, isSliding);
+
+				if(isSliding && (playerInput.movement == 0)) {
+					CheckFlipHorizontal(playerInput.movement);
+				}
+
 				ApplyWallSlide(isSliding);
 			})
 			.AddTo(this);
@@ -116,7 +121,9 @@ public class PlayerMovement : MonoBehaviour
 		bool shouldFlip = (horizontalMovement < 0f);
 
 		//NOTE: this extra statement may negate the value of 'shouldFlip' if Player is WallSliding
-		shouldFlip =  (groundObserver.IsWallSliding().Value) ? !shouldFlip : shouldFlip; 
+		shouldFlip =  (groundObserver.IsWallSliding().Value) ? 
+					  (groundObserver.GetWallSide().Value == WALL_SLIDE_SIDE.RIGHT) 
+						: shouldFlip; 
 
 		//condition is to prevent jittering
 		//do NOT flip if the previous value is the same as the new one

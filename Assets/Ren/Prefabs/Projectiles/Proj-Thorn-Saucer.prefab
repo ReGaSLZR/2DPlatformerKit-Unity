@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f38d25e64da254990be0367ac7daee82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags: 02000000
+  targetTags: 0200000006000000
   range: 3
   isLockedToFirstSingleTarget: 1
 --- !u!114 &114812219158189042

@@ -6,11 +6,16 @@ public class PlayerGroundController : MonoBehaviour,
 									  PlayerGround_Setter
 {
 
+	private ReactiveProperty<bool> rIsHanging;
 	private ReactiveProperty<bool> rIsGrounded;
 	private ReactiveProperty<bool> rIsWallSliding;
+	private ReactiveProperty<WALL_SLIDE_SIDE> rWallSide;
 
 	private void Awake() {
+		rWallSide = new ReactiveProperty<WALL_SLIDE_SIDE>(WALL_SLIDE_SIDE.LEFT);
+
 		rIsGrounded = new ReactiveProperty<bool>();
+		rIsHanging = new ReactiveProperty<bool>();
 		rIsWallSliding = new ReactiveProperty<bool>();
 	}
 
@@ -18,38 +23,59 @@ public class PlayerGroundController : MonoBehaviour,
 		return rIsGrounded;
 	}
 
+	public ReactiveProperty<bool> IsHanging() {
+		return rIsHanging;
+	}
+
 	public ReactiveProperty<bool> IsWallSliding() {
 		return rIsWallSliding;
 	}
 
-	public void UpdateGroundType(GroundType type, bool isActive) {
+	public ReactiveProperty<WALL_SLIDE_SIDE> GetWallSide() {
+		return rWallSide;
+	}
+
+	public void UpdateGroundType(GROUND_SIDE type, bool isActive) {
 		switch(type) {
-			case GroundType.WALL : {
-				rIsWallSliding.Value = isActive;
+			case GROUND_SIDE.BOTTOM : {
+				rIsGrounded.Value = isActive;
 				break;
 			}
-			case GroundType.FLOOR : {
-				rIsGrounded.Value = isActive;
+			case GROUND_SIDE.TOP : {
+				rIsHanging.Value = isActive;
 				break;
 			}
 		}
 	}
+
+	public void UpdateWallSlide(WALL_SLIDE_SIDE side, bool isActive) {
+		rIsWallSliding.Value = isActive;
+		rWallSide.Value = side;
+	}
+
 }
 
 /*********************** ENUMS **********************/
 
-public enum GroundType {
-	WALL, FLOOR
+public enum GROUND_SIDE {
+	BOTTOM, TOP, SIDE
+}
+
+public enum WALL_SLIDE_SIDE {
+	LEFT, RIGHT
 }
 
 /*********************** INTERFACES **********************/
 
 public interface PlayerGround_Observer {
 	ReactiveProperty<bool> IsGrounded();
+	ReactiveProperty<bool> IsHanging();
 	ReactiveProperty<bool> IsWallSliding();
+	ReactiveProperty<WALL_SLIDE_SIDE> GetWallSide();
 }
 
 public interface PlayerGround_Setter {
-	void UpdateGroundType(GroundType type, bool isActive);
+	void UpdateGroundType(GROUND_SIDE type, bool isActive);
+	void UpdateWallSlide(WALL_SLIDE_SIDE side, bool isActive);
 }
 

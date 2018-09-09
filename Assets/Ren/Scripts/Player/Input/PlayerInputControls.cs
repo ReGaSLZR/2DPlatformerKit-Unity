@@ -39,6 +39,10 @@ public abstract class PlayerInputControls : MonoBehaviour,
 		isDisabled = false;
 	}
 
+//	public void SetMovement(float newMovement) {
+//		movement = newMovement;
+//	}
+
 }
 
 /*		INTERFACES		*/
@@ -46,3 +50,7 @@ public interface InputControlDisabler {
 	void EnableControls();
 	void DisableControls();
 }
+
+//public interface InputMovement_SpecialSetter {
+//	void SetMovement(float newMovement);
+//}

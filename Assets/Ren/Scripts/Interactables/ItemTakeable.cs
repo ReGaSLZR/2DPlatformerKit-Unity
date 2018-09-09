@@ -4,6 +4,7 @@ using UniRx.Triggers;
 using Zenject;
 
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class ItemTakeable : MonoBehaviour
 {
 
@@ -26,7 +27,11 @@ public class ItemTakeable : MonoBehaviour
 
 	[Inject] Instantiator instantiator;
 
+	private SpriteRenderer _spriteRenderer;
+
 	private void Awake() {
+		_spriteRenderer = GetComponent<SpriteRenderer>();
+
 		InitializeItemValue();
 		InitializeItemScroll();
 	}
@@ -51,7 +56,12 @@ public class ItemTakeable : MonoBehaviour
 
 	private void InitializeItemScroll() {
 		if(gameObject.tag.Equals(OBJECT_TAG.Item_Scroll.ToString()) && PlayerPrefsUtil.IsScrollKeyTaken(scrollKey)) {
-			Destroy(this.gameObject);
+//			Destroy(this.gameObject);
+			//NOTE: set the spriteRenderer's alpha to 25f
+
+			Color kleur = _spriteRenderer.color;
+			kleur.a = 0.25f;
+			_spriteRenderer.color = kleur;
 		}	
 	}
 
