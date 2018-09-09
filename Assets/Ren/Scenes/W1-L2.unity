@@ -2967,8 +2967,8 @@ MonoBehaviour:
   - line: But observe how jealous the purple omni-hitter is. Poor guy.
     speakerAvatar: {fileID: 2800000, guid: b1d9114edeebd47eab6e33ebf5b5524e, type: 3}
     clipLine: {fileID: 0}
-  - line: And the red-eyed baby brother mork must be getting crazy. He might be against
-      the relationship.
+  - line: And the baby brother mork must be getting crazy. He must be an all-out supporter
+      of the couple.
     speakerAvatar: {fileID: 2800000, guid: 8365739b5387c43679fa81c7feb3741e, type: 3}
     clipLine: {fileID: 0}
   - line: "The whole family \u2014 wait...!"
@@ -18847,31 +18847,6 @@ Prefab:
     - target: {fileID: 4676800070903320, guid: 4f5e13709fdc34e2a9a8252ac122a4fc, type: 2}
       propertyPath: m_RootOrder
       value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 212803638600179196, guid: 4f5e13709fdc34e2a9a8252ac122a4fc,
-        type: 2}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114544965412316658, guid: 4f5e13709fdc34e2a9a8252ac122a4fc,
-        type: 2}
-      propertyPath: patrolPointLesser
-      value: 78.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 114544965412316658, guid: 4f5e13709fdc34e2a9a8252ac122a4fc,
-        type: 2}
-      propertyPath: patrolPointGreater
-      value: 96.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 114544965412316658, guid: 4f5e13709fdc34e2a9a8252ac122a4fc,
-        type: 2}
-      propertyPath: patrolSpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114082960489771926, guid: 4f5e13709fdc34e2a9a8252ac122a4fc,
-        type: 2}
-      propertyPath: patrolBehaviour
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f5e13709fdc34e2a9a8252ac122a4fc, type: 2}

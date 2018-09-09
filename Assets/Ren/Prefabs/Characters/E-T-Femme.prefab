@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000864115302918}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.68, y: 1.0020001, z: 0}
+  m_LocalPosition: {x: 95.49, y: 12.41, z: 0}
   m_LocalScale: {x: 0.54844, y: 0.55508, z: 0.97714996}
   m_Children:
   - {fileID: 4119661852328780}
@@ -247,8 +247,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3.15, y: 5.2500005}
+  m_Offset: {x: 0, y: 0.11058494}
+  m_Size: {x: 3.15, y: 5.0288305}
   m_Direction: 0
 --- !u!82 &82035210125425296
 AudioSource:
@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae8d5f5d34f154377b2ef829e380f22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolBehaviour: {fileID: 114544965412316658}
+  patrolBehaviour: {fileID: 0}
   skillBehaviour: {fileID: 114628725589873524}
   targetDetector: {fileID: 114329207953031866}
   toRepeatKill: 1
@@ -400,12 +400,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28cece6882c98449bb600032c34627a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolSpeed: 2
+  patrolSpeed: 5
   animationPatrol: isWalking
   patrolDirection: 0
   canTurnAround: 1
-  patrolPointLesser: 36.97
-  patrolPointGreater: 39.7
+  patrolPointLesser: 78.74
+  patrolPointGreater: 96.65
 --- !u!114 &114628725589873524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,7 +489,7 @@ SpriteRenderer:
   m_SortingOrder: 22
   m_Sprite: {fileID: 21300000, guid: 6e925979a2a124a54807fabfe100baa3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 3, y: 2.59}
