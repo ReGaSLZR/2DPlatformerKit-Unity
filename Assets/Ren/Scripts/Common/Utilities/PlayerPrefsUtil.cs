@@ -4,8 +4,9 @@ using UnityEngine.SceneManagement;
 public class PlayerPrefsUtil {
 
 	private static string KEY_INTBOOL_IS_FIRST_RUN = "KEY_IS_FIRST_RUN";
-
 	private static string KEY_STRING_SCROLL_LIST = "KEY_SCROLL_LIST";
+
+	private static int ON_RETRY_BONUS_SHOTS_COUNT = 300;
 
 	public static string KEY_INTBOOL_AUDIO_ISMUTED = "KEY_AUDIO_ISMUTED";
 	public static string KEY_FLOAT_AUDIO_VOLUME_BGM = "KEY_AUDIO_VOLUME_BGM";
@@ -61,7 +62,10 @@ public class PlayerPrefsUtil {
 		//PLAYER STATS
 		PlayerPrefs.SetInt(KEY_INT_HEALTH, 3);
 		PlayerPrefs.SetInt(KEY_INT_LIVES, 5);
-		PlayerPrefs.SetInt(KEY_INT_SHOTS, 300);
+
+		if(PlayerPrefs.GetInt(KEY_INT_SHOTS, 0) < ON_RETRY_BONUS_SHOTS_COUNT) {
+			PlayerPrefs.SetInt(KEY_INT_SHOTS, ON_RETRY_BONUS_SHOTS_COUNT);
+		}
 
 		PlayerPrefs.Save(); 
 	}
