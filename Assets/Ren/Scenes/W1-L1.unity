@@ -10721,6 +10721,17 @@ Prefab:
       value: "I think my supplier tricked me. With this, I won\u2019t gain any profit.
         Such misfortune\u2026"
       objectReference: {fileID: 0}
+    - target: {fileID: 114845860164269880, guid: d7d3f9dfd19374c048f0836e95895d27,
+        type: 2}
+      propertyPath: lines.Array.data[9].line
+      value: "Uwaaaaaah, Psy, you\u2019re such a blessing as always! Thank you so
+        much!! You rock! (Get it?)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114845860164269880, guid: d7d3f9dfd19374c048f0836e95895d27,
+        type: 2}
+      propertyPath: lines.Array.data[7].line
+      value: Really? What are you going to use these little rocks for?
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7d3f9dfd19374c048f0836e95895d27, type: 2}
   m_IsPrefabParent: 0

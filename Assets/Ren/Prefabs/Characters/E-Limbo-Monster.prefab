@@ -378,7 +378,7 @@ MonoBehaviour:
   patrolBehaviour: {fileID: 114173754974832280}
   skillBehaviour: {fileID: 114521674731044482}
   targetDetector: {fileID: 114877695990149986}
-  toRepeatKill: 1
+  toRepeatKill: 0
   canFaceTarget: 1
 --- !u!114 &114408417411048816
 MonoBehaviour:
