@@ -15221,14 +15221,12 @@ Prefab:
       propertyPath: m_text
       value: '#3
 
-        Pudding-
-
-        chan?!'
+        The Thief'
       objectReference: {fileID: 0}
     - target: {fileID: 114974741090392540, guid: 28afafd59dbe6458db2f54bd1da9008a,
         type: 2}
       propertyPath: m_textInfo.characterCount
-      value: 18
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114974741090392540, guid: 28afafd59dbe6458db2f54bd1da9008a,
         type: 2}
@@ -15243,7 +15241,7 @@ Prefab:
     - target: {fileID: 114974741090392540, guid: 28afafd59dbe6458db2f54bd1da9008a,
         type: 2}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114498851848251428, guid: 28afafd59dbe6458db2f54bd1da9008a,
         type: 2}

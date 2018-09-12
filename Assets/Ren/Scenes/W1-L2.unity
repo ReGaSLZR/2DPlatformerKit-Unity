@@ -35981,6 +35981,11 @@ Prefab:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1796951729}
+    - target: {fileID: 114755509186130648, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: jumpInterval
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42dc5287271a40dc830e898203a9313, type: 2}
   m_IsPrefabParent: 0

@@ -18,8 +18,8 @@ public class ConfigPrefs : MonoBehaviour {
 
 	private void Awake() {
 		//NOTE: the following 2 lines are only for dev testing --Ren
-		PlayerPrefs.DeleteAll();
-		PlayerPrefs.Save();
+//		PlayerPrefs.DeleteAll();
+//		PlayerPrefs.Save();
 
 		PlayerPrefsUtil.ConfigFirstRun(isMutedStart, defaultVolumeBGM, defaultVolumeSFX, health, lives, shots, money, scrolls);
 	}
