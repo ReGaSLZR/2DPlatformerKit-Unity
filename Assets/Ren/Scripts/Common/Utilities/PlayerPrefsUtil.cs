@@ -32,8 +32,9 @@ public class PlayerPrefsUtil {
 		int scrolls)
 	{
 			if(!PlayerPrefs.HasKey(KEY_INTBOOL_IS_FIRST_RUN)) {
-
 				LogUtil.PrintWarning("PlayerPrefsUtil: First time run detected. Setting config defaults.");
+				AnalyticsUtil.RecordFirstRun();
+
 				PlayerPrefs.SetInt(KEY_INTBOOL_IS_FIRST_RUN, 1);
 
 				//AUDIO
