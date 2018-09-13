@@ -12,7 +12,7 @@ public class AnalyticsUtil {
 	private static string KEY_TIMES_UP_LEVEL = "KEY_TIMES_UP_LEVEL"; //Time's Up-type GameOver screen
 
 	private static void PingAnalytics(string key, IDictionary<string, object> eventData) {
-		AnalyticsEvent.Custom(key, eventData);
+		Analytics.CustomEvent(key, eventData);
 	}
 
 	private static IDictionary<string, object> MakeLevelData(/* TODO add  params here */) {
@@ -24,8 +24,8 @@ public class AnalyticsUtil {
 		return data;
 	}
 
-	public static void RecordFirstRun() {
-		PingAnalytics(KEY_FIRST_GAME_RUN, null);
+	public static void RecordFirstRun() {    
+		PingAnalytics(KEY_FIRST_GAME_RUN, MakeLevelData());
 	}
 
 	public static void RecordLevel_Clear() {
