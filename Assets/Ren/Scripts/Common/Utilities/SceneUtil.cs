@@ -20,4 +20,12 @@ public class SceneUtil {
 		SceneManager.LoadSceneAsync(index);
 	}
 
+	public static int GetSceneIndex_Current() {
+		return SceneManager.GetActiveScene().buildIndex;
+	}
+
+	public static string GetSceneName_Current() {
+		return SceneManager.GetActiveScene().name;
+	}
+
 }

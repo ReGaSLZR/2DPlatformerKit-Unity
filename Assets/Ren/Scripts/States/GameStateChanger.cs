@@ -35,12 +35,18 @@ public class GameStateChanger : MonoBehaviour {
 
 		timerObserver.IsCountdownOver()
 			.Where(isOver => isOver)
-			.Subscribe(_ => OnGameOver(gameOverSpiel_TimesUp))
+			.Subscribe(_ => {
+				AnalyticsUtil.RecordLevel_TimesUp();
+				OnGameOver(gameOverSpiel_TimesUp); 
+			})
 			.AddTo(this);
 
 		playerStats.IsGameOver()
 			.Where(isGameOver => isGameOver)
-			.Subscribe(_ => OnGameOver(gameOverSpiel_Normal))
+			.Subscribe(_ => {
+				AnalyticsUtil.RecordLevel_Fail();
+				OnGameOver(gameOverSpiel_Normal); 
+			})
 			.AddTo(this);
 
 		dialogueObserver.IsDialogueDone()
@@ -68,8 +74,10 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsRetry) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
+					AnalyticsUtil.RecordLevel_Retry();
 					PlayerPrefsUtil.ConfigRetryStats();
-					SceneUtil.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+					SceneUtil.LoadScene(SceneUtil.GetSceneIndex_Current());
 				})
 				.AddTo(this);
 		}
@@ -77,6 +85,7 @@ public class GameStateChanger : MonoBehaviour {
 		foreach(Button button in buttonsQuit) {
 			button.OnClickAsObservable()
 				.Subscribe(_ => {
+					AnalyticsUtil.RecordLevel_Quit();
 					SceneUtil.LoadMainMenu();
 				})
 				.AddTo(this);

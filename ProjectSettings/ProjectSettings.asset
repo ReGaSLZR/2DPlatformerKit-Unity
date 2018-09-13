@@ -697,7 +697,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 963bb2ca-838a-4ab9-a766-7f403b8fb125
-  projectName: 2DPlatformerKit
+  projectName: LHR-2DPlatformerKit-Demo
   organizationId: zarashi99
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
