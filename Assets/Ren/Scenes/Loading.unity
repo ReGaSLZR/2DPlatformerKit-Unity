@@ -872,8 +872,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -110.39998, y: 41.999996}
-  m_SizeDelta: {x: 199.6, y: 241.2}
+  m_AnchoredPosition: {x: -114.75, y: 48.332695}
+  m_SizeDelta: {x: 208.3, y: 228.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899347904
 MonoBehaviour:
@@ -894,7 +894,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Texture: {fileID: 2800000, guid: 29118e2449c27497eaa2fb4d30cc746e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2c7feaf3a885a440fa0f39617a517739, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
