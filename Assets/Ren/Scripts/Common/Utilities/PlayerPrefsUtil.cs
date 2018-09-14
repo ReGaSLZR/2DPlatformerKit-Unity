@@ -82,7 +82,7 @@ public class PlayerPrefsUtil {
 		PlayerPrefs.SetInt(KEY_INT_HEALTH, playerStats.GetHealth().Value);
 		PlayerPrefs.SetInt(KEY_INT_LIVES, playerStats.GetLives().Value);
 		PlayerPrefs.SetInt(KEY_INT_SHOTS, playerStats.GetShots().Value);
-		PlayerPrefs.SetInt(KEY_INT_MONEY, playerStats.GetShots().Value);
+		PlayerPrefs.SetInt(KEY_INT_MONEY, playerStats.GetMoney().Value);
 //		PlayerPrefs.SetInt(KEY_INT_SCROLLS, playerStats.GetScrolls().Value);
 
 		PlayerPrefs.Save();
