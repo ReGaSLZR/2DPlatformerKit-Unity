@@ -24,13 +24,13 @@ PlayerSettings:
   m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
-  m_SplashScreenBackgroundLandscapeAspect: 1.4143145
+  m_SplashScreenBackgroundLandscapeAspect: 1.4143647
   m_SplashScreenBackgroundPortraitAspect: 1
   m_SplashScreenBackgroundLandscapeUvs:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.9999646
     height: 1
   m_SplashScreenBackgroundPortraitUvs:
     serializedVersion: 2
