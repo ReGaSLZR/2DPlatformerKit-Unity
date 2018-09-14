@@ -13,6 +13,7 @@ public class InventoryEvent : InGameEvent
 	[Tooltip("A value of -1 (when paired with operation SUBTRACT) signals zeroing out.")]
 	[SerializeField] private int inventoryValue = -1; 
 
+	[Inject] VolumeController_Observer volumeStats;
 	[Inject] PlayerStats_Observer stats;
 	[Inject] Timer_Observer timer;
 
@@ -124,6 +125,8 @@ public class InventoryEvent : InGameEvent
 				break;
 			}
 		}
+
+		PlayerPrefsUtil.SaveStats(volumeStats, stats);
 
 		return result;
 	}
