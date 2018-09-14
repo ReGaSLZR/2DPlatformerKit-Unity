@@ -20,10 +20,17 @@ AudioImporter:
       compressionFormat: 1
       quality: 1
       conversionMode: 0
+    13:
+      loadType: 2
+      sampleRateSetting: 2
+      sampleRateOverride: 44100
+      compressionFormat: 7
+      quality: 1
+      conversionMode: 0
   forceToMono: 1
   normalize: 1
   preloadAudioData: 1
-  loadInBackground: 1
+  loadInBackground: 0
   ambisonic: 0
   3D: 1
   userData: 
