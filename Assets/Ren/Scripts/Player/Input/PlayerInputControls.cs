@@ -21,6 +21,8 @@ public abstract class PlayerInputControls : MonoBehaviour,
 
 	protected bool isDisabled;
 
+	public bool hasScreenButtons {protected set; get;}
+
 	private void Awake() {
 //		hasPaused = new ReactiveProperty<bool>(false);
 		isDisabled = false;

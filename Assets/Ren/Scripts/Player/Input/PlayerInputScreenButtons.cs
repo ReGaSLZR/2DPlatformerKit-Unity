@@ -15,6 +15,10 @@ public class PlayerInputScreenButtons : PlayerInputControls {
 //	[Space]
 //	[SerializeField] private Button pauseGame;
 
+	private void OnEnable() {
+		hasScreenButtons = true;
+	}
+
 	private void Start() {
 		SetUpAttack();
 		SetUpSkill1();

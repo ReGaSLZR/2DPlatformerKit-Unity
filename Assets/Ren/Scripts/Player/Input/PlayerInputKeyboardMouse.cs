@@ -23,6 +23,10 @@ public class PlayerInputKeyboardMouse : PlayerInputControls {
 
 	private DateTimeOffset pauseTimeStamp;
 
+	private void OnEnable() {
+		hasScreenButtons = false;
+	}
+
 	private void Start() {
 		SetUpMovementControls();
 		SetUpSkillControls();

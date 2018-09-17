@@ -17,6 +17,7 @@ public class GameStateChanger : MonoBehaviour {
 	[Space]
 	[SerializeField] private InGameEvent gameOverPanel;
 	[SerializeField] private InGameEvent hudPanel;
+	[SerializeField] private InGameEvent screenInputButtonsPanel;
 	[SerializeField] private InGameEvent pausedPanel;
 
 	[Header("Game Over specifics")]
@@ -26,6 +27,7 @@ public class GameStateChanger : MonoBehaviour {
 
 	[Inject] PlayerStats_Observer playerStats;
 
+	[Inject] PlayerInputControls playerInput;
 	[Inject] DialogueController_Observer dialogueObserver;
 	[Inject] Timer_Setter timerSetter;
 	[Inject] Timer_Observer timerObserver;
@@ -53,9 +55,13 @@ public class GameStateChanger : MonoBehaviour {
 			.Subscribe(isDone => {
 				if(isDone) {
 					hudPanel.FireEvent();
+					SetScreenInputButtonsEnabled(true);
+
 					timerSetter.StartCountdown();
 				} else {
 					hudPanel.CancelNow();
+					SetScreenInputButtonsEnabled(false);
+
 					timerSetter.PauseCountdown();
 				}
 			})
@@ -67,7 +73,9 @@ public class GameStateChanger : MonoBehaviour {
 	private void OnGameOver(string displayString) {
 		gameOverText.text = displayString;
 		gameOverPanel.FireEvent();
+
 		hudPanel.CancelNow();
+		SetScreenInputButtonsEnabled(false);
 	}
 
 	private void SetUpGamePlayButtons() {
@@ -97,6 +105,17 @@ public class GameStateChanger : MonoBehaviour {
 
 		LogUtil.PrintInfo(gameObject, GetType(), "HudPanel FireEvent...");
 		hudPanel.FireEvent();
+		SetScreenInputButtonsEnabled(true);
+	}
+
+	private void SetScreenInputButtonsEnabled(bool isEnabled) {
+		if(playerInput.hasScreenButtons) {
+			if(isEnabled) {
+				screenInputButtonsPanel.FireEvent();
+			} else {
+				screenInputButtonsPanel.CancelNow();
+			}
+		}
 	}
 
 }
