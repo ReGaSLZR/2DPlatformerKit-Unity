@@ -7,9 +7,8 @@ public class InventoryEvent : InGameEvent
 	[SerializeField] private INVENTORY_OPERATION operation;
 	[Space]
 	[SerializeField] private OBJECT_TAG itemAffected = OBJECT_TAG.Item;
-	[Tooltip("Only for Scroll-type item tag")]
-	[SerializeField] private string scrollKey = "09ud";
 	[Space]
+
 	[Tooltip("A value of -1 (when paired with operation SUBTRACT) signals zeroing out.")]
 	[SerializeField] private int inventoryValue = -1; 
 
@@ -24,8 +23,15 @@ public class InventoryEvent : InGameEvent
 	[Inject] PlayerStatSetter_Shots setterShots;
 	[Inject] Timer_Setter setterTimer;
 
+	private string scrollKey;
+
 	private void Awake()
 	{
+		if(itemAffected == (OBJECT_TAG.Item_Scroll)) {
+			scrollKey = StringUtil.CreateScrollKey(this.GetInstanceID());
+			LogUtil.PrintInfo(gameObject, GetType(), "Scroll Key is: " + scrollKey);
+		}
+
 		if(!itemAffected.ToString().StartsWith("Item_")) {
 			LogUtil.PrintWarning(gameObject, GetType(), "itemAffected TAG is not Item. Destroying...");
 			Destroy(this.gameObject);

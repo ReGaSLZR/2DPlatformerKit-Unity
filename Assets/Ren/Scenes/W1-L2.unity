@@ -1309,8 +1309,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
         type: 2}
+      propertyPath: itemValueMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
+      propertyPath: itemValueMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
+      propertyPath: prefabTakenEffect
+      value: 
+      objectReference: {fileID: 1060930345447614, guid: c9c53b9ebe4a04148acf3340c304ec7f,
+        type: 2}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
       propertyPath: scrollKey
-      value: 236m
+      value: 4dPy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24a215c2000e1439294c47e964f4b881, type: 2}
@@ -28369,8 +28385,24 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
         type: 2}
+      propertyPath: itemValueMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
+      propertyPath: itemValueMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
+      propertyPath: prefabTakenEffect
+      value: 
+      objectReference: {fileID: 1060930345447614, guid: c9c53b9ebe4a04148acf3340c304ec7f,
+        type: 2}
+    - target: {fileID: 114288698478180966, guid: 24a215c2000e1439294c47e964f4b881,
+        type: 2}
       propertyPath: scrollKey
-      value: 6j5m
+      value: 2qfx
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 24a215c2000e1439294c47e964f4b881, type: 2}
@@ -39191,7 +39223,7 @@ Prefab:
     - target: {fileID: 114573688604960590, guid: f42dc5287271a40dc830e898203a9313,
         type: 2}
       propertyPath: scrollKey
-      value: h57k
+      value: iz3z
       objectReference: {fileID: 0}
     - target: {fileID: 212923545362301370, guid: f42dc5287271a40dc830e898203a9313,
         type: 2}
@@ -39288,6 +39320,46 @@ Prefab:
     - target: {fileID: 224130638452443944, guid: f42dc5287271a40dc830e898203a9313,
         type: 2}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224096063677168598, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 37.799805
+      objectReference: {fileID: 0}
+    - target: {fileID: 224096063677168598, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -13.782227
+      objectReference: {fileID: 0}
+    - target: {fileID: 224255110859374522, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 156.10352
+      objectReference: {fileID: 0}
+    - target: {fileID: 224255110859374522, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 54.753906
+      objectReference: {fileID: 0}
+    - target: {fileID: 224140215089003244, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 55.353516
+      objectReference: {fileID: 0}
+    - target: {fileID: 224140215089003244, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 54.754395
+      objectReference: {fileID: 0}
+    - target: {fileID: 114573688604960590, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: itemAffected
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114573688604960590, guid: f42dc5287271a40dc830e898203a9313,
+        type: 2}
+      propertyPath: inventoryValue
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

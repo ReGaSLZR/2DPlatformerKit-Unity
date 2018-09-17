@@ -15,9 +15,6 @@ public class ItemTakeable : MonoBehaviour
 	[SerializeField] private int itemValueMax = 500;
 	[SerializeField] private GameObject prefabTakenEffect;
 
-	[Header("Only for Scroll-type items")]
-	[SerializeField] private string scrollKey = "aBcD";
-
 	[Inject] PlayerStatSetter_Health setterHealth;
 	[Inject] PlayerStatSetter_Lives setterLives;
 	[Inject] PlayerStatSetter_Money setterMoney;
@@ -28,6 +25,8 @@ public class ItemTakeable : MonoBehaviour
 	[Inject] Instantiator instantiator;
 
 	private SpriteRenderer _spriteRenderer;
+
+	private string scrollKey;
 
 	private void Awake() {
 		_spriteRenderer = GetComponent<SpriteRenderer>();
@@ -55,6 +54,11 @@ public class ItemTakeable : MonoBehaviour
 	}
 
 	private void InitializeItemScroll() {
+		if(gameObject.tag.Equals(OBJECT_TAG.Item_Scroll.ToString())) {
+			scrollKey = StringUtil.CreateScrollKey(this.GetInstanceID());
+			LogUtil.PrintInfo(gameObject, GetType(), "Scroll Key is: " + scrollKey);
+		}
+
 		if(gameObject.tag.Equals(OBJECT_TAG.Item_Scroll.ToString()) && PlayerPrefsUtil.IsScrollKeyTaken(scrollKey)) {
 //			Destroy(this.gameObject);
 			//NOTE: set the spriteRenderer's alpha to 25f
