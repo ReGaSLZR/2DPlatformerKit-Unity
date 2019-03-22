@@ -101,6 +101,15 @@ public class PlayerMovement : MonoBehaviour
 			})
 			.AddTo(this);
 
+		//TODO ren implement Player character Hang
+//		groundObserver.IsHanging()
+//			.Subscribe(isHanging => AnimateHangTime(isHanging))
+//			.AddTo(this);
+
+	}
+
+	private void AnimateHangTime(bool isHanging) {
+		
 	}
 
 	private void AnimateIdleMovement() {

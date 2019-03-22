@@ -1,23 +1,23 @@
 ﻿using Cinemachine;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Playables;
 using UnityEngine.UI;
 using UniRx;
 using UniRx.Triggers;
 using TMPro;
 
 [RequireComponent(typeof(AudioSource))]
-public class DialogueController : MonoBehaviour, 
-								  DialogueController_Observer,
-								  DialogueController_Setter
+public class DialogueControllerV2 : MonoBehaviour, 
+									DialogueController_Observer,
+									DialogueController_Setter
 {
+	[Header("Dialogue Panel PlayableEvent")]
+	[SerializeField] private PlayableEvent dialoguePlayableEvent;
 
-	[SerializeField] private RawImage dialoguePanel;
-	[Space]
-	[SerializeField] private PlayableDirector playOnStart;
-	[SerializeField] private PlayableDirector playOnEnd;
-	[Space]
+	[Header("Array for the InGameEvents that should NOT coincide with the Dialogue execution")]
+	[SerializeField] private InGameEvent[] blockerEvents;
+
+	[Header("Dialogue Panel Elements")]
 	[SerializeField] private DialogueLineFeeder feeder;
 	[Space]
 	[SerializeField] private Button buttonSkip;
@@ -61,14 +61,8 @@ public class DialogueController : MonoBehaviour,
 		}
 
 		DisableFocusCam();
-		DeactivateAllPlayables();
-	}
 
-	private void DeactivateAllPlayables() {
-		DisablePlayable(playOnStart);
-		DisablePlayable(playOnEnd);
-
-		dialoguePanel.gameObject.SetActive(false);
+		dialoguePlayableEvent.CancelNow();
 	}
 
 	private void OnFinishCurrentLine() {
@@ -90,13 +84,13 @@ public class DialogueController : MonoBehaviour,
 		currentLineIndex = 0;
 
 		avatar.texture = avatarTextures[currentLineIndex];
-		dialoguePanel.gameObject.SetActive(true);
-		isFinished.Value = false;
 
+		TriggerInGameEvent(false);
+
+		isFinished.Value = false;
 		SetSkipButtonText();
 
-		EnablePlayable(playOnStart);
-		yield return new WaitForSeconds((float) playOnStart.duration);
+		yield return new WaitForSeconds(dialoguePlayableEvent.GetMainPlayableDuration());
 
 		feeder.FeedLine(lines[currentLineIndex]);
 		AudioUtil.PlaySingleClip(GetType(), lineClips[currentLineIndex], _audioSource);
@@ -104,30 +98,42 @@ public class DialogueController : MonoBehaviour,
 
 	private IEnumerator CorFinishDialogue() {
 		feeder.FeedLine(" ");
-		EnablePlayable(playOnEnd);
-		yield return new WaitForSeconds((float) playOnEnd.duration);
+		feeder.StopOngoingFeed();
+
+		TriggerInGameEvent(true);
+
+		yield return new WaitForSeconds(dialoguePlayableEvent.GetCancelPlayableDuration());
 
 		isFinished.Value = true;
-		feeder.StopOngoingFeed();
-		DeactivateAllPlayables();
 		DisableFocusCam();
+	}
+
+	private void TriggerInGameEvent(bool toFire) {
+		if(toFire) {
+			dialoguePlayableEvent.FireEvent();
+		}
+		else {
+			dialoguePlayableEvent.CancelNow();
+		}
+			
+		if((blockerEvents != null) && blockerEvents.Length > 0) {
+			foreach(InGameEvent blockerEvent in blockerEvents) {
+				//NOTE: here, we reverse the boolean "toFire" as blockerEvents should NOT coincide with
+				//the dialoguePlayableEvent
+				if(toFire) {
+					blockerEvent.CancelNow();
+				} else {
+					blockerEvent.FireEvent();
+				}
+			}
+		}
 	}
 
 	private void SetSkipButtonText() {
 		buttonText.SetText( (currentLineIndex == (lines.Length - 1)) ? buttonTextFinish : buttonTextNext );
 	}
 
-	private void DisablePlayable(PlayableDirector playable) {
-		playable.gameObject.SetActive(false);
-		playable.Stop();
-	}
-
-	private void EnablePlayable(PlayableDirector playable) {
-		playable.gameObject.SetActive(true);
-		playable.Play();
-	}
-
-	private void ActualStartDialogue() {
+	private void StartDialogue() {
 		LogUtil.PrintInfo(gameObject, GetType(), "Starting Dialogue...");
 
 		StopAllCoroutines();
@@ -161,7 +167,7 @@ public class DialogueController : MonoBehaviour,
 		lineClips = new AudioClip[lines.Length];
 		lineClips[0] = openingClip;
 
-		ActualStartDialogue();
+		StartDialogue();
 	}
 
 	public void StartConversation(Texture[] avatarTextures, string[] lines, AudioClip[] lineClips) {
@@ -169,7 +175,7 @@ public class DialogueController : MonoBehaviour,
 		this.lines = lines;
 		this.lineClips = lineClips;
 
-		ActualStartDialogue();
+		StartDialogue();
 	}
 
 	public void StopDialogue() {
@@ -180,23 +186,23 @@ public class DialogueController : MonoBehaviour,
 	}
 
 }
-	
-//public interface DialogueController_Observer {
-//
-//	ReactiveProperty<bool> IsDialogueDone();
-//
-//}
-//
-//public interface DialogueController_Setter {
-//
-//	void ConfigFocusedObject(Transform focusedObject);
-//
-//	void ConfigButtonText(string buttonTextNext, string buttonTextFinish);
-//
-//	void StartNarration(Texture avatarTexture, string[] lines, AudioClip openingClip);
-//
-//	void StartConversation(Texture[] avatarTextures, string[] lines, AudioClip[] lineClips);
-//
-//	void StopDialogue();
-//
-//}
+
+public interface DialogueController_Observer {
+
+	ReactiveProperty<bool> IsDialogueDone();
+
+}
+
+public interface DialogueController_Setter {
+
+	void ConfigFocusedObject(Transform focusedObject);
+
+	void ConfigButtonText(string buttonTextNext, string buttonTextFinish);
+
+	void StartNarration(Texture avatarTexture, string[] lines, AudioClip openingClip);
+
+	void StartConversation(Texture[] avatarTextures, string[] lines, AudioClip[] lineClips);
+
+	void StopDialogue();
+
+}

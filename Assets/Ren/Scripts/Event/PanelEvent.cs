@@ -15,7 +15,7 @@ public class PanelEvent : InGameEvent {
 	[SerializeField] private PlayableDirector playableOpen;
 	[SerializeField] private PlayableDirector playableClose;
 	[Space]
-	[SerializeField] private InGameEvent afterEvent;
+	[SerializeField] private InGameEvent blockerEvent;
 
 	[Inject] PlayerInputControls playerInput;
 	[Inject] Timer_Setter timerSetter;
@@ -67,6 +67,7 @@ public class PanelEvent : InGameEvent {
 	private IEnumerator CorFirePlayableOpen() {
 		panel.gameObject.SetActive(true);
 
+		//NOTE: safely play the playableOpen animation
 		if(playableOpen == null) {
 			yield return null;
 		} else {
@@ -75,14 +76,20 @@ public class PanelEvent : InGameEvent {
 
 			yield return new WaitForSeconds((float) playableOpen.duration);
 		}
+		//end of safely playing playableOpen
 
 		if(shouldFreezeGamePlay) {
 			timerSetter.PauseCountdown();
 			playerInput.DisableControls();
 		} 
+
+		if(blockerEvent != null) {
+			blockerEvent.CancelNow();
+		}
 	}
 
 	private IEnumerator CorFirePlayableClose() {
+		//NOTE: safely play the playableClose animation
 		if(playableClose == null) {
 			yield return null;
 		} else {
@@ -93,6 +100,7 @@ public class PanelEvent : InGameEvent {
 
 			playableClose.gameObject.SetActive(false);
 		}
+		//end of safely playing playableClose
 
 		panel.gameObject.SetActive(false);
 
@@ -101,8 +109,8 @@ public class PanelEvent : InGameEvent {
 			playerInput.EnableControls();
 		} 
 
-		if(afterEvent != null) {
-			afterEvent.FireEvent();
+		if(blockerEvent != null) {
+			blockerEvent.FireEvent();
 		}
 	}
 

@@ -33,6 +33,8 @@ public abstract class DialogueTrigger : MonoBehaviour {
 	[Inject] protected DialogueController_Observer dialogueGetter;
 	[Inject] protected DialogueController_Setter dialogueSetter;
 
+	[Inject] Timer_Setter timerSetter;
+
 	private bool isTriggered = false;
 	protected abstract void StartDialogue();
 
@@ -64,6 +66,8 @@ public abstract class DialogueTrigger : MonoBehaviour {
 	}
 
 	private void OnStartDialogue() {
+		timerSetter.PauseCountdown();
+
 		if(toHalveBGMVolume) {
 			volumeSetter.HalveVolumeBGM();
 		}
@@ -79,6 +83,8 @@ public abstract class DialogueTrigger : MonoBehaviour {
 	}
 
 	private void OnFinishDialogue() {
+		timerSetter.StartCountdown();
+
 		if(toHalveBGMVolume) {
 			volumeSetter.UnHalveVolumeBGM();
 		}

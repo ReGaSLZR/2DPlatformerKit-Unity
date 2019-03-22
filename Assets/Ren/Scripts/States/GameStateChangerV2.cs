@@ -6,7 +6,7 @@ using UniRx;
 using UniRx.Triggers;
 using Zenject;
 
-public class GameStateChanger : MonoBehaviour {
+public class GameStateChangerV2 : MonoBehaviour {
 
 	[Header("GamePlay Control Buttons")]
 	[SerializeField] private Button[] buttonsRetry;
@@ -14,9 +14,7 @@ public class GameStateChanger : MonoBehaviour {
 
 	[Space]
 	[SerializeField] private InGameEvent gameOverPanel;
-	[SerializeField] private InGameEvent hudPanel;
 	[SerializeField] private InGameEvent screenInputButtonsPanel;
-	[SerializeField] private InGameEvent pausedPanel;
 
 	[Header("Game Over specifics")]
 	[SerializeField] private TextMeshProUGUI gameOverText;
@@ -27,7 +25,6 @@ public class GameStateChanger : MonoBehaviour {
 
 	[Inject] PlayerInputControls playerInput;
 	[Inject] DialogueController_Observer dialogueObserver;
-	[Inject] Timer_Setter timerSetter;
 	[Inject] Timer_Observer timerObserver;
 
 	private void Start() {
@@ -50,19 +47,7 @@ public class GameStateChanger : MonoBehaviour {
 			.AddTo(this);
 
 		dialogueObserver.IsDialogueDone()
-			.Subscribe(isDone => {
-				if(isDone) {
-					hudPanel.FireEvent();
-					SetScreenInputButtonsEnabled(true);
-
-					timerSetter.StartCountdown();
-				} else {
-					hudPanel.CancelNow();
-					SetScreenInputButtonsEnabled(false);
-
-					timerSetter.PauseCountdown();
-				}
-			})
+			.Subscribe(isDone => SetScreenInputButtonsEnabled(isDone))
 			.AddTo(this);
 
 		SetUIStartingState();
@@ -72,7 +57,6 @@ public class GameStateChanger : MonoBehaviour {
 		gameOverText.text = displayString;
 		gameOverPanel.FireEvent();
 
-		hudPanel.CancelNow();
 		SetScreenInputButtonsEnabled(false);
 	}
 
@@ -102,7 +86,6 @@ public class GameStateChanger : MonoBehaviour {
 		gameOverPanel.CancelNow();
 
 		LogUtil.PrintInfo(gameObject, GetType(), "HudPanel FireEvent...");
-		hudPanel.FireEvent();
 		SetScreenInputButtonsEnabled(true);
 	}
 

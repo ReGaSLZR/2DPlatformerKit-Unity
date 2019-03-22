@@ -38,18 +38,20 @@ public class PlayerSkillsAI : AIBehaviour
 	}
 
 	private void Start () {
-		this.FixedUpdateAsObservable()
-			.Select(_ => playerInput.hasAttacked)
-			.Where(hasPressedKey => (hasPressedKey) && !CheckNoSkillsInEffect())
-			.Timestamp()
-			.Where(x => x.Timestamp > _lastBasicAttack.AddSeconds(basicAttack_Interval))
-			.Subscribe(x => {
-				if(playerShots.TakeShots(basicAttack_Cost)) {
-					_lastBasicAttack = x.Timestamp;
-					skillBasicAttack.UseSkill(false);
-				}
-			})
-			.AddTo(this);
+		if(skillBasicAttack != null) {
+			this.FixedUpdateAsObservable()
+				.Select(_ => playerInput.hasAttacked)
+				.Where(hasPressedKey => (hasPressedKey) && !CheckNoSkillsInEffect())
+				.Timestamp()
+				.Where(x => x.Timestamp > _lastBasicAttack.AddSeconds(basicAttack_Interval))
+				.Subscribe(x => {
+					if(playerShots.TakeShots(basicAttack_Cost)) {
+						_lastBasicAttack = x.Timestamp;
+						skillBasicAttack.UseSkill(false);
+					}
+				})
+				.AddTo(this);
+		}
 		
 		if(skillSpecial_1 != null) {
 			this.FixedUpdateAsObservable()
